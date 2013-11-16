@@ -174,7 +174,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
-    <Compile Include="Models\AccountModels.vb" />
     <Compile Include="ReportWebForm\Rain\ReportRain.aspx.designer.vb">
       <DependentUpon>ReportRain.aspx</DependentUpon>
     </Compile>

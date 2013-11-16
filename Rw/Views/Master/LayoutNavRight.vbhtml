@@ -28,7 +28,7 @@
         body, iframe, html {
             width: 100%;
             height: 100%;
-            margin: 0;
+            margin: 1px;
         }
     </style>
     @*<%-- overflow: hidden;overflow-x:hidden;overflow-y:hidnen;--%>*@
@@ -53,13 +53,6 @@
 
         };
 
-        var SetTitle = function (t) {
-            $('#ptitle').html(t);
-        };
-        var RemoveTitle = function () {
-            $('#ptitle').remove();
-        };
-
     </script>
     @*<%-- 核心脚本--%>*@
     @*<asp:ContentPlaceHolder ID="MainContent" runat="server" />*@
@@ -72,7 +65,7 @@
 <body>
     <div id="layoutShow">
 
-        <div id="RDContent" position="center">
+        <div id="RDContent" position="center" title="ss">
  
            <p id="ptitle" style="position:absolute;left:30%;top:45%;font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 60px">XX</p>
 
