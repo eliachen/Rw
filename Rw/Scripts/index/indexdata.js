@@ -10,6 +10,11 @@ var indexdata =
 		{ url: "/InfRainAndWater/Index?id=Water/WaterReportData", text: "水情信息图表" }
 	]
     },
+     {
+          text: "泵站监控", isexpand: "true", children: [
+          { url: "/InfPumpStation?id=PumpStation", text: "泵站信息一览" }
+         ]
+     },
     { text: "基础数据管理", isexpand: "true", children: [
         { url: "/InfRainAndWater/Index?id=Rain/RainOriginalTable", text: "雨情数据表" },
 		{ url: "/InfRainAndWater/Index?id=Water/WaterOriginalTable", text: "水情数据表" },

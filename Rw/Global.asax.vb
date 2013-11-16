@@ -10,7 +10,7 @@ Public Class MvcApplication
 
     Shared Sub RegisterRoutes(ByVal routes As RouteCollection)
         routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
-        routes.IgnoreRoute("Report/test/{weform}")
+        'routes.IgnoreRoute("Report/test/{weform}")
         routes.IgnoreRoute("ReportWebForm/Water/{weform}")
         ' MapRoute 按顺序采用以下参数:
         ' (1) 路由名称
