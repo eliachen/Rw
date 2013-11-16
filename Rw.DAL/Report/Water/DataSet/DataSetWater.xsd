@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetWater" targetNamespace="http://tempuri.org/WaterDay.xsd" xmlns:mstns="http://tempuri.org/WaterDay.xsd" xmlns="http://tempuri.org/WaterDay.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetWater" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetWater" msprop:Generator_UserDSName="DataSetWater">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WaterTime0" msprop:Generator_TableClassName="WaterTime0DataTable" msprop:Generator_TableVarName="tableWaterTime0" msprop:Generator_TablePropName="WaterTime0" msprop:Generator_RowDeletingName="WaterTime0RowDeleting" msprop:Generator_UserTableName="WaterTime0" msprop:Generator_RowChangingName="WaterTime0RowChanging" msprop:Generator_RowEvHandlerName="WaterTime0RowChangeEventHandler" msprop:Generator_RowDeletedName="WaterTime0RowDeleted" msprop:Generator_RowEvArgName="WaterTime0RowChangeEvent" msprop:Generator_RowChangedName="WaterTime0RowChanged" msprop:Generator_RowClassName="WaterTime0Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="RZAVG" msprop:Generator_ColumnVarNameInTable="columnRZAVG" msprop:Generator_ColumnPropNameInRow="RZAVG" msprop:Generator_ColumnPropNameInTable="RZAVGColumn" msprop:Generator_UserColumnName="RZAVG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RZMAXTIME" msprop:Generator_ColumnVarNameInTable="columnRZMAXTIME" msprop:Generator_ColumnPropNameInRow="RZMAXTIME" msprop:Generator_ColumnPropNameInTable="RZMAXTIMEColumn" msprop:Generator_UserColumnName="RZMAXTIME" type="xs:string" minOccurs="0" />
+              <xs:element name="RZMAX" msdata:Caption="DataColumn2" msprop:Generator_ColumnVarNameInTable="columnRZMAX" msprop:Generator_ColumnPropNameInRow="RZMAX" msprop:Generator_ColumnPropNameInTable="RZMAXColumn" msprop:Generator_UserColumnName="RZMAX" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RZMINTIME" msprop:Generator_ColumnVarNameInTable="columnRZMINTIME" msprop:Generator_ColumnPropNameInRow="RZMINTIME" msprop:Generator_ColumnPropNameInTable="RZMINTIMEColumn" msprop:Generator_UserColumnName="RZMINTIME" type="xs:string" minOccurs="0" />
+              <xs:element name="RZMIN" msdata:Caption="DataColumn3" msprop:Generator_ColumnVarNameInTable="columnRZMIN" msprop:Generator_ColumnPropNameInRow="RZMIN" msprop:Generator_ColumnPropNameInTable="RZMINColumn" msprop:Generator_UserColumnName="RZMIN" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WaterDayEveHour" msprop:Generator_TableClassName="WaterDayEveHourDataTable" msprop:Generator_TableVarName="tableWaterDayEveHour" msprop:Generator_TablePropName="WaterDayEveHour" msprop:Generator_RowDeletingName="WaterDayEveHourRowDeleting" msprop:Generator_UserTableName="WaterDayEveHour" msprop:Generator_RowChangingName="WaterDayEveHourRowChanging" msprop:Generator_RowEvHandlerName="WaterDayEveHourRowChangeEventHandler" msprop:Generator_RowDeletedName="WaterDayEveHourRowDeleted" msprop:Generator_RowEvArgName="WaterDayEveHourRowChangeEvent" msprop:Generator_RowChangedName="WaterDayEveHourRowChanged" msprop:Generator_RowClassName="WaterDayEveHourRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="HOUR" msdata:Caption="DataColumn3" msprop:Generator_ColumnVarNameInTable="columnHOUR" msprop:Generator_ColumnPropNameInRow="HOUR" msprop:Generator_ColumnPropNameInTable="HOURColumn" msprop:Generator_UserColumnName="HOUR" type="xs:int" minOccurs="0" />
+              <xs:element name="RZ" msprop:Generator_ColumnVarNameInTable="columnRZ" msprop:Generator_ColumnPropNameInRow="RZ" msprop:Generator_ColumnPropNameInTable="RZColumn" msprop:Generator_UserColumnName="RZ" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WaterMonthEveDay" msprop:Generator_TableClassName="WaterMonthEveDayDataTable" msprop:Generator_TableVarName="tableWaterMonthEveDay" msprop:Generator_TablePropName="WaterMonthEveDay" msprop:Generator_RowDeletingName="WaterMonthEveDayRowDeleting" msprop:Generator_UserTableName="WaterMonthEveDay" msprop:Generator_RowChangingName="WaterMonthEveDayRowChanging" msprop:Generator_RowEvHandlerName="WaterMonthEveDayRowChangeEventHandler" msprop:Generator_RowDeletedName="WaterMonthEveDayRowDeleted" msprop:Generator_RowEvArgName="WaterMonthEveDayRowChangeEvent" msprop:Generator_RowChangedName="WaterMonthEveDayRowChanged" msprop:Generator_RowClassName="WaterMonthEveDayRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="DAY" msdata:Caption="DataColumn3" msprop:Generator_ColumnVarNameInTable="columnDAY" msprop:Generator_ColumnPropNameInRow="DAY" msprop:Generator_ColumnPropNameInTable="DAYColumn" msprop:Generator_UserColumnName="DAY" type="xs:string" minOccurs="0" />
+              <xs:element name="RZAVG" msdata:Caption="RZ" msprop:Generator_ColumnVarNameInTable="columnRZAVG" msprop:Generator_ColumnPropNameInRow="RZAVG" msprop:Generator_ColumnPropNameInTable="RZAVGColumn" msprop:Generator_UserColumnName="RZAVG" type="xs:float" minOccurs="0" />
+              <xs:element name="RZMAX" msprop:Generator_ColumnVarNameInTable="columnRZMAX" msprop:Generator_ColumnPropNameInRow="RZMAX" msprop:Generator_ColumnPropNameInTable="RZMAXColumn" msprop:Generator_UserColumnName="RZMAX" type="xs:float" minOccurs="0" />
+              <xs:element name="RZMIN" msprop:Generator_ColumnVarNameInTable="columnRZMIN" msprop:Generator_ColumnPropNameInRow="RZMIN" msprop:Generator_ColumnPropNameInTable="RZMINColumn" msprop:Generator_UserColumnName="RZMIN" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WaterYearEveMonth" msprop:Generator_TableClassName="WaterYearEveMonthDataTable" msprop:Generator_TableVarName="tableWaterYearEveMonth" msprop:Generator_TablePropName="WaterYearEveMonth" msprop:Generator_RowDeletingName="WaterYearEveMonthRowDeleting" msprop:Generator_UserTableName="WaterYearEveMonth" msprop:Generator_RowChangingName="WaterYearEveMonthRowChanging" msprop:Generator_RowEvHandlerName="WaterYearEveMonthRowChangeEventHandler" msprop:Generator_RowDeletedName="WaterYearEveMonthRowDeleted" msprop:Generator_RowEvArgName="WaterYearEveMonthRowChangeEvent" msprop:Generator_RowChangedName="WaterYearEveMonthRowChanged" msprop:Generator_RowClassName="WaterYearEveMonthRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTH" msdata:Caption="DataColumn3" msprop:Generator_ColumnVarNameInTable="columnMONTH" msprop:Generator_ColumnPropNameInRow="MONTH" msprop:Generator_ColumnPropNameInTable="MONTHColumn" msprop:Generator_UserColumnName="MONTH" type="xs:string" minOccurs="0" />
+              <xs:element name="RZAVG" msdata:Caption="RZ" msprop:Generator_ColumnVarNameInTable="columnRZAVG" msprop:Generator_ColumnPropNameInRow="RZAVG" msprop:Generator_ColumnPropNameInTable="RZAVGColumn" msprop:Generator_UserColumnName="RZAVG" type="xs:float" minOccurs="0" />
+              <xs:element name="RZMAX" msprop:Generator_ColumnVarNameInTable="columnRZMAX" msprop:Generator_ColumnPropNameInRow="RZMAX" msprop:Generator_ColumnPropNameInTable="RZMAXColumn" msprop:Generator_UserColumnName="RZMAX" type="xs:float" minOccurs="0" />
+              <xs:element name="RZMAXTIME" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnRZMAXTIME" msprop:Generator_ColumnPropNameInRow="RZMAXTIME" msprop:Generator_ColumnPropNameInTable="RZMAXTIMEColumn" msprop:Generator_UserColumnName="RZMAXTIME" type="xs:string" minOccurs="0" />
+              <xs:element name="RZMIN" msprop:Generator_ColumnVarNameInTable="columnRZMIN" msprop:Generator_ColumnPropNameInRow="RZMIN" msprop:Generator_ColumnPropNameInTable="RZMINColumn" msprop:Generator_UserColumnName="RZMIN" type="xs:float" minOccurs="0" />
+              <xs:element name="RZMINTIME" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnRZMINTIME" msprop:Generator_ColumnPropNameInRow="RZMINTIME" msprop:Generator_ColumnPropNameInTable="RZMINTIMEColumn" msprop:Generator_UserColumnName="RZMINTIME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WaterQTime" msprop:Generator_TableClassName="WaterQTimeDataTable" msprop:Generator_TableVarName="tableWaterQTime" msprop:Generator_TablePropName="WaterQTime" msprop:Generator_RowDeletingName="WaterQTimeRowDeleting" msprop:Generator_UserTableName="WaterQTime" msprop:Generator_RowChangingName="WaterQTimeRowChanging" msprop:Generator_RowEvHandlerName="WaterQTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="WaterQTimeRowDeleted" msprop:Generator_RowEvArgName="WaterQTimeRowChangeEvent" msprop:Generator_RowChangedName="WaterQTimeRowChanged" msprop:Generator_RowClassName="WaterQTimeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="INQAVG" msprop:Generator_ColumnVarNameInTable="columnINQAVG" msprop:Generator_ColumnPropNameInRow="INQAVG" msprop:Generator_ColumnPropNameInTable="INQAVGColumn" msprop:Generator_UserColumnName="INQAVG" type="xs:float" minOccurs="0" />
+              <xs:element name="INQMAX" msprop:Generator_ColumnVarNameInTable="columnINQMAX" msprop:Generator_ColumnPropNameInRow="INQMAX" msprop:Generator_ColumnPropNameInTable="INQMAXColumn" msprop:Generator_UserColumnName="INQMAX" type="xs:float" minOccurs="0" />
+              <xs:element name="INQMIN" msprop:Generator_ColumnVarNameInTable="columnINQMIN" msprop:Generator_ColumnPropNameInRow="INQMIN" msprop:Generator_ColumnPropNameInTable="INQMINColumn" msprop:Generator_UserColumnName="INQMIN" type="xs:float" minOccurs="0" />
+              <xs:element name="OTQAVG" msprop:Generator_ColumnVarNameInTable="columnOTQAVG" msprop:Generator_ColumnPropNameInRow="OTQAVG" msprop:Generator_ColumnPropNameInTable="OTQAVGColumn" msprop:Generator_UserColumnName="OTQAVG" type="xs:float" minOccurs="0" />
+              <xs:element name="OTQMAX" msprop:Generator_ColumnVarNameInTable="columnOTQMAX" msprop:Generator_ColumnPropNameInRow="OTQMAX" msprop:Generator_ColumnPropNameInTable="OTQMAXColumn" msprop:Generator_UserColumnName="OTQMAX" type="xs:float" minOccurs="0" />
+              <xs:element name="OTQMIN" msprop:Generator_ColumnVarNameInTable="columnOTQMIN" msprop:Generator_ColumnPropNameInRow="OTQMIN" msprop:Generator_ColumnPropNameInTable="OTQMINColumn" msprop:Generator_UserColumnName="OTQMIN" type="xs:float" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WaterWthTime" msprop:Generator_TableClassName="WaterWthTimeDataTable" msprop:Generator_TableVarName="tableWaterWthTime" msprop:Generator_TablePropName="WaterWthTime" msprop:Generator_RowDeletingName="WaterWthTimeRowDeleting" msprop:Generator_UserTableName="WaterWthTime" msprop:Generator_RowChangingName="WaterWthTimeRowChanging" msprop:Generator_RowEvHandlerName="WaterWthTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="WaterWthTimeRowDeleted" msprop:Generator_RowEvArgName="WaterWthTimeRowChangeEvent" msprop:Generator_RowChangedName="WaterWthTimeRowChanged" msprop:Generator_RowClassName="WaterWthTimeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="STCD" msprop:Generator_ColumnVarNameInTable="columnSTCD" msprop:Generator_ColumnPropNameInRow="STCD" msprop:Generator_ColumnPropNameInTable="STCDColumn" msprop:Generator_UserColumnName="STCD" type="xs:string" minOccurs="0" />
+              <xs:element name="STNM" msprop:Generator_ColumnVarNameInTable="columnSTNM" msprop:Generator_ColumnPropNameInRow="STNM" msprop:Generator_ColumnPropNameInTable="STNMColumn" msprop:Generator_UserColumnName="STNM" type="xs:string" minOccurs="0" />
+              <xs:element name="WAVG" msprop:Generator_ColumnVarNameInTable="columnWAVG" msprop:Generator_ColumnPropNameInRow="WAVG" msprop:Generator_ColumnPropNameInTable="WAVGColumn" msprop:Generator_UserColumnName="WAVG" type="xs:string" minOccurs="0" />
+              <xs:element name="WMAX" msprop:Generator_ColumnVarNameInTable="columnWMAX" msprop:Generator_ColumnPropNameInRow="WMAX" msprop:Generator_ColumnPropNameInTable="WMAXColumn" msprop:Generator_UserColumnName="WMAX" type="xs:string" minOccurs="0" />
+              <xs:element name="WMIN" msprop:Generator_ColumnVarNameInTable="columnWMIN" msprop:Generator_ColumnPropNameInRow="WMIN" msprop:Generator_ColumnPropNameInTable="WMINColumn" msprop:Generator_UserColumnName="WMIN" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

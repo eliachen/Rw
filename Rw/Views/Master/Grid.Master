@@ -1,0 +1,341 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="../../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+    <link href="../../lib/ligerUI/skins/Gray/css/all.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="../../lib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+    <script src="../../lib/json2.js" type="text/javascript"></script>
+
+
+      <script src="../../lib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
+    <script src="../../lib/jquery-validation/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="../../lib/jquery-validation/messages_cn.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../../Scripts/LigerUI/AjaxHelper.js"></script>
+    <script type="text/javascript">
+        //测站数据表格
+        var Grid;
+
+        //弹窗
+        var GridDialog;
+        //Grid样式类型  
+        var GridVisual = {
+        //编辑栏
+            edit: true,
+            //直接编辑
+        directedit:false,
+        //查找栏
+        searchForm:true
+        };
+
+
+        //Grid的列对应
+    var GridColumns = {
+        //列映射
+        mapcolums: [],
+            //排序列
+            sortName: ""
+        };
+
+        var SearchField = {
+            //内容
+            fields: null,
+            searchCallBack: null
+        };
+
+
+        //Grid数据源url:数据源有服务端异步加载,客户端不做处理
+
+    var GridUrl = {
+        //数据
+        gdata: "",
+        //数据搜索地址
+        gsearchdata:"",
+        //数据处理表单
+        gform: "",
+        //数据处理实现体
+        gforminf: ""
+    };
+   
+   //表单数据处理
+    var GridDataDeal = {
+        Success: function (data) { },
+        Add: function (data, url) { },
+        Edit: function (data, url) { },
+        See: function (data, url) { },
+        Delete: function (data, url) { },
+        Save: function (data, url) { }
+    };
+
+   
+
+
+        //Grid工具栏
+    var GridToolBar;
+
+    //表单的设置
+    var FormOption = { width: null,
+                     height: null };
+
+
+    var InitialGridSet = function () {
+        //工具栏设置
+        if (GridVisual.edit) {
+            //可视的工具栏
+            GridToolBar = { items: [
+                        { text: '新增', click: Add, icon: 'add' },
+                        { line: true },
+                        { text: '编辑', click: Edit, icon: 'modify' },
+                        { line: true },
+                        { text: '删除', click: Delete, icon: 'delete' },
+                        { line: true },
+                        { text: '查看', click: See, icon: 'bookpen' },
+                        { line: true },
+                        { text: '刷新', click: Fresh, icon: 'refresh' }
+                        ]
+            };
+
+        };
+
+        if (GridVisual.directedit) {
+            //可视的工具栏
+            GridToolBar = { items: [
+                        { text: '新增', click: Add, icon: 'add' },
+                        { line: true },
+                        { text: '保存', click: Save, icon: 'save' },
+                        { line: true },
+                        { text: '刷新', click: Fresh, icon: 'refresh' }
+                        ]
+            };
+            //可视的操作栏
+            GridColumns.mapcolums.push(ExtendGridColCtr);
+        };
+
+
+        //搜索栏设置 SearchField.searchCallBack(search.getData());
+        if (GridVisual.searchForm) {
+            var search = $("#formsearch").ligerForm({
+                fields: SearchField.fields,
+                buttons: [{ text: '查找', width: 60, newline: false, click: function () { searchSever(search.getData()); } }],
+                appendID: false,
+                toJSON: JSON2.stringify
+            });
+            //表单验证
+            $.metadata.setType("attr", "validate");
+            LigerUIHelper.validate("#formsearch");
+        } else {
+            $("#formsearch").remove();
+        };
+
+        //设置数据
+        Grid = $("#Grid").ligerGrid({
+            url: GridUrl.gdata,
+            dataAction: "server",
+            columns: GridColumns.mapcolums,
+            toolbar: GridToolBar,
+            pageSize: 20, sortName: GridColumns.sortName, enabledEdit: true, clickToEdit: false,
+            checkbox: false, switchPageSizeApplyComboBox: true,
+            width: '100%', height: '99%', rownumbers: true,
+            //设置数据类型
+            parms: { pagetype: "data" },
+            //服务器获取数据
+            onSuccess: QueryData
+        });
+    };
+
+    </script>
+
+    <script type="text/javascript">
+        var searchSever = function (data) {
+            if ($("#formsearch").valid()) {
+            //设置查找模式
+            Grid.setParm("pagetype", "search");
+            Grid.setParm("searchparm", JSON2.stringify(data));
+            Grid.options.page = 1;
+            Grid.options.newpage = 1;
+            Grid.loadServerData({ page: 1, pagesize: 20,
+                pagetype: "search", searchparm: JSON2.stringify(data)
+            });
+            } else {
+            $.ligerDialog.error("查询条件错误,请重新输入！");
+            }
+           
+
+
+            //Grid.reload();
+        };
+    </script>
+
+    <script type="text/javascript">
+        
+        //检查选定行
+        var CheckSelected = function () {
+            var selected = Grid.getSelected();
+            if (!selected) { LigerUIHelper.tip('请选择行!'); return }
+            return selected;
+        };
+
+        var Save = function () {
+
+
+            if (Grid.getChanges().length == 0) { $.ligerDialog.warn('没有任何改动！'); return };
+
+            $.ligerDialog.confirm('确认保存？', function (val) {
+                if (val) {
+                    if (Grid.getUpdated().length != 0) {
+                        var editdata = GridDataDeal.Edit(Grid.getUpdated());
+                        LigerUIHelper.ajax({
+                            loading: "正在处理修改请求.....",
+                            url: GridUrl.gforminf + '?formtype=edit&formdata=' + JSON2.stringify(editdata),
+                            success: function (data, msg) {
+                                //LigerUIHelper.tip(msg);
+                                $.ligerDialog.success(msg);
+                                //刷新
+                                Grid.data.Rows = [];
+                                Grid.deletedRows = [];
+                                Fresh();
+                            },
+                            error: function (msg) {
+                                $.ligerDialog.error(msg);
+                            }
+                        });
+                    };
+
+
+                    if (Grid.getDeleted().length != 0) {
+                        var deldata = GridDataDeal.Delete(Grid.getDeleted());
+                        LigerUIHelper.ajax({
+                            loading: "正在处理删除请求.....",
+                            url: GridUrl.gforminf + '?formtype=delete&formdata=' + JSON2.stringify(deldata),
+                            success: function (data, msg) {
+                                //LigerUIHelper.tip(msg);
+                                $.ligerDialog.success(msg);
+
+                                //刷新
+                                Grid.data.Rows = [];
+                                Grid.deletedRows = [];
+                                Fresh();
+                            },
+                            error: function (msg) {
+                                $.ligerDialog.error(msg);
+                            }
+                        });
+                    }
+                };
+            });
+
+        };
+        
+        var Add = function () {
+            GridDialog = $.ligerDialog.open({ title: "新增", height: FormOption.height || 600, width: FormOption.width|| 850, url: GridUrl.gform + '?formtype=new' });
+        };
+
+        var Edit = function () {
+            var rel = CheckSelected();
+            if (rel) {
+               var dealrel = GridDataDeal.See(rel);
+               GridDialog=  $.ligerDialog.open({ title: "编辑", height: FormOption.height || 600, width: FormOption.width|| 850, url: GridUrl.gform + '?formtype=edit&formdata=' + JSON2.stringify(dealrel) });
+            }
+        };
+
+        var Delete = function () {
+            var rel = CheckSelected();
+            if (rel) {
+                var dealrel = GridDataDeal.Delete(rel);
+                $.ligerDialog.confirm('确认删除？', function (val) {
+                    if (val) {
+                        LigerUIHelper.ajax({
+                            loading: "正在处理请求.....",
+                            url: GridUrl.gforminf + '?formtype=delete&formdata=' + JSON2.stringify(dealrel),
+                            success: function (data, msg) {
+                                LigerUIHelper.tip(msg);
+                                //对应位置的元素直接删除
+                                Grid.deleteRow(rel);
+                            }
+                        });
+                    };
+                });
+            }
+        };
+
+        var See = function () {
+            var rel = CheckSelected();
+            if (rel) {
+                var dealrel = GridDataDeal.See(rel);
+                GridDialog = $.ligerDialog.open({ title: "查看", height: FormOption.height || 600, width: FormOption.width || 850, url: GridUrl.gform + '?formtype=see&formdata=' + JSON2.stringify(dealrel) });
+            }
+        };
+
+        var Fresh = function () {
+            //设置单纯数据模式
+            Grid.setParm("pagetype", "data");
+            Grid.reload();
+        };
+    </script>
+
+    <script type="text/javascript">
+
+        //行操作
+        var beginEdit = function (rowid) {
+            Grid.beginEdit(rowid);
+        };
+
+         var cancelEdit  = function (rowid) {
+            Grid.cancelEdit(rowid);
+        };
+
+        var endEdit = function (rowid) {
+            Grid.endEdit(rowid);
+        };
+
+
+        var deleteRow = function (rowid) {
+            $.ligerDialog.confirm('确定删除?', function (yes) {
+                if (yes) {
+                    Grid.deleteRow(rowid);
+                };
+            });
+        };
+
+        var QueryData = function (data, grid) {
+            if (data.Rows.length == 0) {
+                LigerUIHelper.tip("服务器没有请求数据返回！");
+            } else {
+                GridDataDeal.Success(data);
+                LigerUIHelper.tip("已加载请求数据！");
+            };
+        };
+        var ExtendGridColCtr = { display: '操作', isSort: false, width: 120, render: function (rowdata, rowindex, value) {
+            var h = "";
+            if (!rowdata._editing) {
+
+                h += "<img src='../../lib/ligerUI/skins/icons/modify.gif' /><a href='javascript:beginEdit(" + rowindex + ")'>修改</a> ";
+                h += "<img src='../../lib/ligerUI/skins/icons/delete.gif' /><a href='javascript:deleteRow(" + rowindex + ")'>删除</a> ";
+            }
+            else {
+                h += "<img src='../../lib/ligerUI/skins/icons/comment.gif' /><a href='javascript:endEdit(" + rowindex + ")'>提交</a> ";
+                h += "<img src='../../lib/ligerUI/skins/icons/back.gif' /><a href='javascript:cancelEdit(" + rowindex + ")'>取消</a> ";
+            }
+            return h;
+        }
+        };
+
+    </script>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"> </asp:ContentPlaceHolder>
+</head>
+<body>
+<!--搜索栏-->
+<form id="formsearch" class="l-form"></form>
+    <div>
+       <div id="Grid"></div>     
+    </div>
+</body>
+</html>

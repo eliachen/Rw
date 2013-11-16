@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A8214FF4-197A-4C94-91B1-2BE18728FA35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Rw.DAL</RootNamespace>
+    <AssemblyName>Rw.DAL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Rw.DAL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Rw.DAL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MicrosoftReportViewerWebForms_v10.1.0.0\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\Rain\DataSet\DataSetRain.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRain.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rain\DataSet\DataSetRain.vb">
+      <DependentUpon>DataSetRain.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rain\RepRain.vb" />
+    <Compile Include="Report\Rain\RepRainConfig.vb" />
+    <Compile Include="Report\RepConfigvb.vb" />
+    <Compile Include="Report\RepRel.vb" />
+    <Compile Include="Report\Water\RepWaterConfig.vb" />
+    <Compile Include="Report\Water\DataSet\DataSetWater.Designer.vb">
+      <DependentUpon>DataSetWater.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Water\RepWater.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rain\Model\ReportRainTime0.rdlc" />
+    <EmbeddedResource Include="Report\Rain\Pic\PicRainTime0.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterQTime.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterDayEveHour.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterTime0.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterQTime.rdlc" />
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterTime0.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Report\Rain\DataSet\DataSetRain.xsc">
+      <DependentUpon>DataSetRain.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Rain\DataSet\DataSetRain.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRain.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>Rep.Rain</CustomToolNamespace>
+    </None>
+    <None Include="Report\Rain\DataSet\DataSetRain.xss">
+      <DependentUpon>DataSetRain.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Report\Rain\Model\ReportRainDay.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rain\Pic\PicRainDay.rdlc" />
+    <EmbeddedResource Include="Report\Rain\Model\ReportYear_EveMonth.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rain\Pic\PicMonth_EveDay.rdlc" />
+    <EmbeddedResource Include="Report\Rain\Model\ReportMonth_EveDay.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rain\Pic\PicYear_EveMonth.rdlc" />
+    <None Include="Report\Water\DataSet\DataSetWater.xsc">
+      <DependentUpon>DataSetWater.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Water\DataSet\DataSetWater.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetWater.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>Rep.Water</CustomToolNamespace>
+    </None>
+    <None Include="Report\Water\DataSet\DataSetWater.xss">
+      <DependentUpon>DataSetWater.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterDayEveHour.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterMonthEveDay.rdlc" />
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterMonthEveDay.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterYearEveMonth.rdlc" />
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterYearEveMonth.rdlc" />
+    <EmbeddedResource Include="Report\Water\Model\ReportWaterWthTime.rdlc" />
+    <EmbeddedResource Include="Report\Water\Pic\PicWaterWthTime.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rw.EntityData\Rw.EntityData.vbproj">
+      <Project>{7B829EAC-1416-49EC-A98A-80DDB712A8A8}</Project>
+      <Name>Rw.EntityData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

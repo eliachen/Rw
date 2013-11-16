@@ -1,0 +1,166 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Form.master.vb" Inherits="Rw.Form" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <link href="../../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+    <link href="../../lib/ligerUI/skins/Gray/css/all.css" rel="stylesheet" type="text/css" /> 
+   
+    <script src="../../lib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+    <script src="../../lib/jquery-validation/jquery.metadata.js" type="text/javascript"></script>
+    <script src="../../lib/jquery-validation/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="../../lib/jquery-validation/messages_cn.js" type="text/javascript"></script>
+  
+        <script src="../../lib/json2.js" type="text/javascript"></script>
+        <script src="../../Scripts/LigerUI/AjaxHelper.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        //表单
+        var Form;
+
+        //表单类型 :new,see,edit
+        var formType ="new";
+
+        //需要请求的数据
+        var formData;
+
+        //表单处理的地址
+        var formDealUrl;
+
+        //表单的结构
+        var formfields = [];
+
+        //结束后的事件
+        var CallBack = {
+            "data": function (data) { },
+            "new": function (data) { },
+            "delete": function (data) { },
+            "edit": function (data) { },
+            "close": function () { }
+        };
+
+        //初始化表单按键
+        var formButtons = [];
+
+
+        var InitialFormSet = function () {
+
+            //设置表单按钮
+            if (formType == "new") {
+                formButtons = [{
+                    newline: false,
+                    text: "新建", click: function () {
+                        //检查表单
+                        if ($("#mainform").valid()) {
+                            //提交表单
+                            GetFormData({ formtype: "new", formdata: JSON2.stringify(Form.getData()) }
+                         , function (data, msg) {
+                             LigerUIHelper.tip(msg);
+                             CallBack["new"](data);
+                         });
+                        } else {
+                            $.ligerDialog.error('无法新建,表单验证失败！');
+                            Form.showInvalid();
+                        }
+
+                    }
+                }];
+            };
+
+            if (formType == "edit") {
+                formButtons = [{
+                    newline: false,
+                    text: "保存", click: function (ss) {
+                        if ($("#mainform").valid()) {
+                            GetFormData({ formtype: "edit", formdata: JSON2.stringify(Form.getData()) }
+                                                , function (data, msg) {
+                                                    LigerUIHelper.tip(msg);
+                                                    CallBack["edit"](data);
+                                                });
+                        } else {
+                            $.ligerDialog.error('无法保存,表单验证失败！');
+                            Form.showInvalid();
+                        }
+                    }
+                }];
+            };
+
+
+            if (formType == "delete") {
+                formButtons = [{
+                    newline: false,
+                    text: "删除", click: function () {
+                        GetFormData({ formtype: "delete", formdata: JSON2.stringify(Form.getData()) }
+                         , function (data, msg) {
+                             LigerUIHelper.tip(msg);
+                             CallBack["delete"](data);
+                         });
+                    }
+                }];
+            };
+
+            //增加关闭按钮
+            if (CallBack["close"]) {
+                formButtons.push({ newline: false, text: "关闭", click: CallBack["close"] });
+            };
+
+
+
+
+            //初始化表单
+            Form = $("#mainform").ligerForm({
+                inputWidth: 170, labelWidth: 90, space: 40,
+                fields: formfields,
+                buttons: formButtons
+            });
+
+            //设置数据(当其不为新建表单时)
+            if (formType != "new") {
+                GetFormData({ formtype: "data", formdata: formData }, function (data) {
+                    //设置数据
+                    Form.setData(data);
+                    //
+                    CallBack["data"](data);
+                });
+            };
+
+            if (formType == "new" || formType == "edit") {
+                //表单验证
+                $.metadata.setType("attr", "validate");
+                LigerUIHelper.validate("#mainform");
+            }
+
+            //设置显示模式
+            if (formType == "see" || formType == "delete") {
+                //Form.options.readonly = true;
+                $("input,select,textarea", $("#mainform")).attr("readonly", "readonly");
+            };
+
+            //设置button模式
+            $(".l-form-buttons").height(45);
+        };
+    </script>
+
+    <script type="text/javascript">
+        var GetFormData = function (formdata, CallBack) {
+            LigerUIHelper.ajax({
+                url: formDealUrl,
+                data: formdata,
+                success: CallBack,
+                error: function (msg) {
+                    LigerUIHelper.tip(msg);
+                }
+            });
+        };
+    </script>
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="mainform"></form> 
+</body>
+</html>

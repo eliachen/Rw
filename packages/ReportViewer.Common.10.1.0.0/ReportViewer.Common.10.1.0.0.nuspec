@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ReportViewer.Common.10</id>
+    <version>1.0.0</version>
+    <title>ReportViewer.Common 10.0</title>
+    <authors>AAI</authors>
+    <owners>AAI</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common dll used by Microsoft.ReportViewer</description>
+    <summary>Used by the Microsoft.ReportViewer dlls</summary>
+    <releaseNotes />
+    <copyright>AAI 2013</copyright>
+    <language />
+  </metadata>
+</package>

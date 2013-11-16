@@ -1,0 +1,225 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <script src="../../lib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <link href="../../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+    <script src="../../lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/plugins/ligerDateEditor.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/plugins/ligerButton.js" type="text/javascript"></script>
+    <script src="../../lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Scripts/LigerUI/AjaxHelper.js"></script>
+    <%--图表需求--%>
+    <script src="../../eCharts/esl.js" type="text/javascript"></script>
+    <script src="../../Scripts/Charts/eChartsHelper.js" type="text/javascript"></script>
+
+    <%-- 异步数据加载 --%>
+    <script src="../../Scripts/LigerUI/AjaxHelper.js" type="text/javascript"></script>
+
+    <script  type="text/javascript">
+        //图表命名空间
+        var ECharts;
+
+        //------服务器输出-------
+        //测站号
+        var stcd;
+        //测站名称
+        var stnm;
+        //时间差
+        var timeDiff;
+        //------------------------
+
+
+        //开始时间
+        var startTime;
+        //结束时间
+        var endTime;
+
+
+
+        var InitialSet = function () {
+
+            //初始化时间控件
+            $("#txtStartTime").ligerDateEditor(
+                {
+
+                    format: "yyyy-MM-dd hh",
+                    label: '起始时间',
+                    labelWidth: 60,
+                    labelAlign: 'center',
+                    cancelable: false,
+                    showTime: true,
+                    onChangeDate: function (val) {
+                        this.setValue(val + ':00');
+                        startTime = val + ':00';
+                    }
+
+                });
+
+            $("#txtEndTime").ligerDateEditor(
+                {
+                    format: "yyyy-MM-dd hh",
+                    label: '结束时间',
+                    labelWidth: 60,
+                    labelAlign: 'center',
+                    cancelable: false,
+                    showTime: true,
+                    onChangeDate: function (val) {
+                        this.setValue(val + ':00');
+                        endTime = val + ':00';
+                    }
+                });
+
+
+            //时间差
+            timeDiff = parseInt($("#timediff").val(), 10);
+
+            //初始化时间
+            var d = new Date();
+            var initialEndTime = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':00';
+            d.setDate(d.getDate() - timeDiff);
+            var initialStartTime = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':00';
+
+            //设置初始化值
+            $("#txtStartTime").ligerGetDateEditorManager().setValue(initialStartTime);
+            $("#txtEndTime").ligerGetDateEditorManager().setValue(initialEndTime);
+            startTime = initialStartTime;
+            endTime = initialEndTime;
+
+
+            //初始化布局
+            $("#layoutChart").ligerLayout({ bottomHeight: 25, space: 2, allowBottomResize: false });
+
+
+
+            //初始化绘制曲线:当前时间内十天的数据值
+            stcd = $('#stcd').val();
+            stnm = $('#stnm').val();
+
+        };
+      
+    </script>
+
+    <script type="text/javascript">
+        //
+        var Initial = function (Fn) {
+            $(function () {
+                InitialSet();
+                Fn();
+
+            });
+        };
+
+
+
+
+
+        //查询按钮
+        var InitialQueryButton = function (clickFn) {
+            $("#ButtonQuery").ligerButton({
+                text: '查询',
+                click: function (e) { clickFn(); }
+            });
+        };
+
+
+
+        //绘图
+        var DrawChart = function (chartept) {
+            eChartsHelper_GetChart(function (ec) {
+                var Chart = ec.init(document.getElementById('graph'));
+                var ept = {
+                    type: 'bar',
+                    title: 'test',
+                    X: { xdata: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'], xname: '月份'
+                    },
+                    Y: { ydata: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3], yname: '降雨量'
+                    }
+
+                };
+
+                
+                 Chart.showLoading({
+                                    text: "数据加载中.....",    //loading话术
+                                    effect: 'bubble'
+                                });
+                eChartsHelper_DrawEasyBar(Chart, chartept || ept);
+
+                Chart.hideLoading()
+            });
+        };
+
+        //无数据显示
+      var DrawChartShowLoding=  function (loadtext){
+                eChartsHelper_GetChart(function (ec) {
+                     var Chart = ec.init(document.getElementById('graph'));
+                     Chart.showLoading({
+                                    text: loadtext,    //loading话术
+                                    effect: 'bubble'
+                                });
+                                })
+                 };
+
+
+        //异步加载数据
+      var QueryAndDraw  =  function (DoOpts) {
+            LigerUIHelper.ajax({
+                loding: '正在加载图表数据.....',
+                url: DoOpts.url,
+                data: { _stcd: stcd, _startTime: startTime, _endTime: endTime },
+                success: function (recvdata) {
+                    var ChartData = DoOpts.DealData(recvdata);
+                    var ept = {
+                        type: 'bar',
+                        title: DoOpts.title || '错误',
+                        X:{
+                             xdata:ChartData.xdata, xname: DoOpts.xname|| '时间'
+                           },
+                        Y: { 
+                        ydata: ChartData.ydata, yname:DoOpts.yname || '降雨量'
+                        }
+                        };
+                        //绘图
+                        var tmp=DrawChart(ept);
+                    },
+                    error:function(msg){
+                        DrawChartShowLoding('无数据.....');
+                        //提升错误信息
+                        LigerUIHelper.tip(msg);
+                    }
+
+            });
+        };
+
+    </script>
+    <%--需要处理的的Js文本--%>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</head>
+<body>
+  <div id="layoutChart" style="width:100%;overflow-x:hidden;overflow-y:hidden;">
+    <div position="center"  id="graph"></div>
+    <div position="bottom">
+        <table>
+            <tr>
+                <td style="width:143px">
+                        <input id="txtStartTime" type="text" style="display:block" /> 
+                </td>
+                <td style="width:170px">
+                        <input id="txtEndTime" type="text" style="display:block" />
+                </td>
+                <td>
+                <div id="ButtonQuery"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+   </div>
+<input id="timediff" type="hidden" value=<%: ViewData("timediff") %> />
+<input id="stcd" type="hidden" value=<%: ViewData("stcd") %> />
+<input id="stnm" type="hidden" value=<%: ViewData("stnm") %> />
+</body>
+</html>

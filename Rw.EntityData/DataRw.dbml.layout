@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataRwData">
+  <DataContextMoniker Name="/DataRwDataContext" />
+  <nestedChildShapes>
+    <classShape Id="efa89151-3b71-492c-88fa-1e58238dae85" absoluteBounds="2.625, 3.25, 2, 2.9086836751302081">
+      <DataClassMoniker Name="/DataRwDataContext/ST_RSVR_R" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce609579-48c3-4f6d-ae5d-dee3c25866e1" absoluteBounds="2.64, 3.71, 1.9700000000000002, 2.348683675130208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6f57dbd-959d-4ac6-8d42-ca94e9ccbdd0" absoluteBounds="2.625, 0.875, 2, 2.1446048990885416">
+      <DataClassMoniker Name="/DataRwDataContext/ST_PPTN_R" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a9098a4-288d-406f-ac0e-ea3525169580" absoluteBounds="2.64, 1.335, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ce5128d-96f5-4b17-93aa-1e7414b6c0ef" absoluteBounds="0.5, 0.875, 2, 5.9649987792968746">
+      <DataClassMoniker Name="/DataRwDataContext/ST_STBPRP_B" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9b5047f-ee67-4d9a-9ccf-91fae313759a" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 5.404998779296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

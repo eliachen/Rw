@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Rw" Class="DataRwDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.245.153.92;Initial Catalog=Rw;Persist Security Info=True;User ID=eliachen" SettingsObjectName="Rw.EntityData.My.MySettings" SettingsPropertyName="RwConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ST_RSVR_R" Member="ST_RSVR_R">
+    <Type Name="ST_RSVR_R">
+      <Column Name="STCD" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TM" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RZ" Type="System.Decimal" DbType="Decimal(7,3)" CanBeNull="true" />
+      <Column Name="INQ" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" />
+      <Column Name="W" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" />
+      <Column Name="BLRZ" Type="System.Decimal" DbType="Decimal(7,3)" CanBeNull="true" />
+      <Column Name="OTQ" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" />
+      <Column Name="RWCHRCD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="RWPTN" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="INQDR" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="MSQMT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_PPTN_R" Member="ST_PPTN_R">
+    <Type Name="ST_PPTN_R">
+      <Column Name="STCD" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TM" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DRP" Type="System.Decimal" DbType="Decimal(5,1)" CanBeNull="true" />
+      <Column Name="INTV" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="PDR" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="DYP" Type="System.Decimal" DbType="Decimal(5,1)" CanBeNull="true" />
+      <Column Name="WTH" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ST_STBPRP_B" Member="ST_STBPRP_B">
+    <Type Name="ST_STBPRP_B">
+      <Column Name="STCD" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STNM" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="RVNM" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="HNNM" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="BSNM" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="LGTD" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="LTTD" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="STLC" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="ADDVCD" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="DTMNM" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="DTMEL" Type="System.Decimal" DbType="Decimal(7,3)" CanBeNull="true" />
+      <Column Name="DTPR" Type="System.Decimal" DbType="Decimal(7,3)" CanBeNull="true" />
+      <Column Name="STTP" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="FRGRD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ESSTYM" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="BGFRYM" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="ATCUNIT" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="ADMAUTH" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="LOCALITY" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="STBK" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="STAZT" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="DSTRVM" Type="System.Decimal" DbType="Decimal(6,1)" CanBeNull="true" />
+      <Column Name="DRNA" Type="System.Decimal" DbType="Decimal(7,0)" CanBeNull="true" />
+      <Column Name="PHCD" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="USFL" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="COMMENTS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MODITIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
