@@ -188,6 +188,13 @@
       <DependentUpon>ReportWater.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Views\InfRainAndWater\Water\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InfRainAndWater\Water\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Views\Master\Form.Master.designer.vb">
       <DependentUpon>Form.Master</DependentUpon>
     </Compile>
@@ -234,6 +241,7 @@
     <Content Include="Views\InfRainAndWater\Water\WaterReportData.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterOriginalTable.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterDetail.aspx" />
+    <Content Include="Views\InfRainAndWater\Water\WebForm1.aspx" />
     <Content Include="Views\Master\Query.Master" />
     <Content Include="Views\Master\Grid.Master" />
     <Content Include="Views\Master\Form.Master" />

@@ -65,9 +65,9 @@
 <body>
     <div id="layoutShow">
 
-        <div id="RDContent" position="center" title="ss">
+        <div id="RDContent" position="center">
  
-           <p id="ptitle" style="position:absolute;left:30%;top:45%;font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 60px">XX</p>
+           @*<p id="ptitle" style="position:absolute;left:30%;top:45%;font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 60px">XX</p>*@
 
            @RenderSection("CONTENT", True)
         </div>
