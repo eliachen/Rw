@@ -3,6 +3,22 @@
 (function ($) {
     window['LigerUIHelper'] = {};
 
+
+    //右下角的提示框
+    LigerUIHelper.tiptm = function (message,tm) {
+        if (LigerUIHelper.wintip) {
+            LigerUIHelper.wintip.set('content', message);
+            LigerUIHelper.wintip.show();
+        }
+        else {
+            LigerUIHelper.wintip = $.ligerDialog.tip({ content: message });
+        }
+        //4000ms后关闭
+        setTimeout(function () {
+            LigerUIHelper.wintip.hide()
+        }, tm);
+    };
+
     //右下角的提示框
     LigerUIHelper.tip = function (message) {
         if (LigerUIHelper.wintip) {

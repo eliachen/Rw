@@ -47,6 +47,8 @@
             //初始化Accordion高度
             var height = $(".l-layout-center").height();
             var acrd = $("#accordioninf").ligerAccordion({ height: height - 24 });
+            //设置大小
+            acrd.setHeight($(".l-layout-center").height() - 24);
             //动态更新Accordion的高度
             function f_heightChanged(options) {
                 if (acrd && options.middleHeight - 24 > 0)
