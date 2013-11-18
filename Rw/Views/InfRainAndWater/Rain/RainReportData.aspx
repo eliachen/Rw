@@ -20,7 +20,6 @@
               success: function (data) {
                   GridRows.Rows = data;
                   GridRows.Total = data.length;
-
                   InitialForms();
 
               }

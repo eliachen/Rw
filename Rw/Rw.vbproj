@@ -188,11 +188,11 @@
       <DependentUpon>ReportWater.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="WebFormTemp.aspx.designer.vb">
-      <DependentUpon>WebFormTemp.aspx</DependentUpon>
+    <Compile Include="VideoWebForm\WebFormVideo.aspx.designer.vb">
+      <DependentUpon>WebFormVideo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebFormTemp.aspx.vb">
-      <DependentUpon>WebFormTemp.aspx</DependentUpon>
+    <Compile Include="VideoWebForm\WebFormVideo.aspx.vb">
+      <DependentUpon>WebFormVideo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Views\Master\Form.Master.designer.vb">
@@ -219,6 +219,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
     <None Include="lib\ligerUI\skins\icons\新建 Microsoft Office Excel 工作表.xlsx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -230,9 +231,14 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Rw.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.css" />
+    <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.jpg" />
+    <Content Include="jQuery.jPlayer\main.js" />
     <Content Include="packages.config" />
     <Content Include="ReportWebForm\Rain\ReportRain.aspx" />
     <Content Include="ReportWebForm\Water\ReportWater.aspx" />
+    <Content Include="Scripts\Video\VideoHelper.js" />
+    <Content Include="tokyo.m4v" />
     <Content Include="Views\InfBasicData\Station.aspx" />
     <Content Include="Views\InfBasicData\StationDetail.aspx" />
     <Content Include="Views\InfRainAndWater\Rain\RainOriginalTable.aspx" />
@@ -241,7 +247,7 @@
     <Content Include="Views\InfRainAndWater\Water\WaterReportData.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterOriginalTable.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterDetail.aspx" />
-    <Content Include="WebFormTemp.aspx" />
+    <Content Include="VideoWebForm\WebFormVideo.aspx" />
     <Content Include="Views\Master\Query.Master" />
     <Content Include="Views\Master\Grid.Master" />
     <Content Include="Views\Master\Form.Master" />
@@ -272,6 +278,7 @@
     <None Include="My Project\PublishProfiles\配置文件1.pubxml" />
     <Content Include="Views\Master\LayoutNavRight.vbhtml" />
     <Content Include="Views\InfPumpStation\PumpStation.vbhtml" />
+    <Content Include="Views\InfPumpStation\PumpStationVideo.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

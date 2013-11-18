@@ -12,7 +12,8 @@ var indexdata =
     },
      {
           text: "泵站监控", isexpand: "true", children: [
-          { url: "/InfPumpStation?id=PumpStation", text: "泵站信息一览" }
+          { url: "/InfPumpStation?id=PumpStation", text: "泵站数据信息一览" },
+          { url: "/InfPumpStation?id=PumpStationVideo", text: "泵站视频监控" }
          ]
      },
     { text: "基础数据管理", isexpand: "true", children: [
