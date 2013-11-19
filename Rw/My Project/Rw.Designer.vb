@@ -45,31 +45,32 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("60000")>  _
-        Public ReadOnly Property DataFlush() As Integer
-            Get
-                Return CType(Me("DataFlush"),Integer)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=114.213.236.232;Initial Catalog=Rw;User ID=eliachen;Password=12345")>  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString), _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrate" & _
+            "d Security=True;Connect Timeout=30")> _
         Public ReadOnly Property DbConnStr() As String
             Get
-                Return CType(Me("DbConnStr"),String)
+                Return CType(Me("DbConnStr"), String)
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("6000")> _
+        Public ReadOnly Property DataFlush() As Integer
+            Get
+                Return CType(Me("DataFlush"), Integer)
+            End Get
+        End Property
+
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\MrLin\RainAndWater\Rw\Rw.DAL")> _
         Public ReadOnly Property RepPath() As String
             Get
-                Return CType(Me("RepPath"),String)
+                Return CType(Me("RepPath"), String)
             End Get
         End Property
     End Class

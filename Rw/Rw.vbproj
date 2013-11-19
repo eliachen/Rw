@@ -64,64 +64,68 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="System">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Web.DataVisualization" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Data">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -174,6 +178,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="ReportWebForm\Rain\ReportRain.aspx.designer.vb">
       <DependentUpon>ReportRain.aspx</DependentUpon>
     </Compile>
@@ -188,10 +197,11 @@
       <DependentUpon>ReportWater.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="VideoWebForm\WebFormVideo.aspx.designer.vb">
+    <Compile Include="Settings.vb" />
+    <Compile Include="TempWebForm\WebFormVideo.aspx.designer.vb">
       <DependentUpon>WebFormVideo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="VideoWebForm\WebFormVideo.aspx.vb">
+    <Compile Include="TempWebForm\WebFormVideo.aspx.vb">
       <DependentUpon>WebFormVideo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -200,6 +210,13 @@
     </Compile>
     <Compile Include="Views\Master\Form.Master.vb">
       <DependentUpon>Form.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Master\LayoutNavRight.Master.designer.vb">
+      <DependentUpon>LayoutNavRight.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\LayoutNavRight.Master.vb">
+      <DependentUpon>LayoutNavRight.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Master\ReportData.Master.designer.vb">
@@ -220,6 +237,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
+    <Content Include="Views\InfPumpStation\PumpStationVideo.aspx" />
+    <Content Include="Views\InfPumpStation\PumpStation.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="lib\ligerUI\skins\icons\新建 Microsoft Office Excel 工作表.xlsx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -234,11 +256,12 @@
     <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.css" />
     <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.jpg" />
     <Content Include="jQuery.jPlayer\main.js" />
+    <Content Include="lib\jquery\jquery-1.6.2.min.js" />
     <Content Include="packages.config" />
     <Content Include="ReportWebForm\Rain\ReportRain.aspx" />
     <Content Include="ReportWebForm\Water\ReportWater.aspx" />
     <Content Include="Scripts\Video\VideoHelper.js" />
-    <Content Include="tokyo.m4v" />
+    <Content Include="App_Data\test.m4v" />
     <Content Include="Views\InfBasicData\Station.aspx" />
     <Content Include="Views\InfBasicData\StationDetail.aspx" />
     <Content Include="Views\InfRainAndWater\Rain\RainOriginalTable.aspx" />
@@ -247,7 +270,7 @@
     <Content Include="Views\InfRainAndWater\Water\WaterReportData.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterOriginalTable.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterDetail.aspx" />
-    <Content Include="VideoWebForm\WebFormVideo.aspx" />
+    <Content Include="TempWebForm\WebFormVideo.aspx" />
     <Content Include="Views\Master\Query.Master" />
     <Content Include="Views\Master\Grid.Master" />
     <Content Include="Views\Master\Form.Master" />
@@ -276,9 +299,18 @@
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <None Include="My Project\PublishProfiles\配置文件1.pubxml" />
-    <Content Include="Views\Master\LayoutNavRight.vbhtml" />
-    <Content Include="Views\InfPumpStation\PumpStation.vbhtml" />
-    <Content Include="Views\InfPumpStation\PumpStationVideo.vbhtml" />
+    <Content Include="Views\Master\LayoutNavRight.Master" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -613,15 +645,6 @@
     <Content Include="Views\InfRainAndWater\RainAndWater.aspx" />
     <Content Include="Views\InfRainAndWater\Rain\RainQuery.aspx" />
     <Content Include="Views\InfRainAndWater\Water\WaterQuery.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -641,9 +664,7 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Rw.Common\Rw.Common.vbproj">
       <Project>{6423FFE4-47A1-476B-B244-E281D9EAAB61}</Project>
