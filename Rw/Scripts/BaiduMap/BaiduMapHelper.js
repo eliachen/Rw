@@ -1,24 +1,34 @@
 ﻿
 //map
 //point:(BMap.Point)
-//imgpath:(String)
-//label:(String)
+//cig.img(String)图片地址
+//cig.label(String)显示标签
+//cig.animation(enum:BMAP_ANIMATION_DROP:坠落,BMAP_ANIMATION_BOUNCE:跳动)
 //作用:添加标注
-function addMaker(map, point, imgpath,label) {
-//    Size(width:Number, height:Number)
-    var _size = new BMap.Size(24, 24);
-    var _icon = new BMap.Icon(imgpath, _size);
-    var MarkerOptions = { icon: _icon };
-    var marker = new BMap.Marker(point, MarkerOptions);
-    //设置label
-    var _label = new BMap.Label("");
-    _label.setContent(label);
-    _label.setStyle({ color: "black", border: "1" });
-    var off_x = label.length;
-    _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
-    marker.setLabel(_label);
-    map.addOverlay(marker);
-    return marker;
+function addMaker(map, point, cig) {
+    if (!cig) {
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);              // 将标注添加到地图中
+        return marker;
+    } else {
+        //    Size(width:Number, height:Number)
+        var _size = new BMap.Size(24, 24);
+        var _icon = new BMap.Icon(cig.img, _size);
+        var MarkerOptions = { icon: _icon };
+        var marker = new BMap.Marker(point, MarkerOptions);
+        //设置label
+        var _label = new BMap.Label("");
+        _label.setContent(cig.label);
+        _label.setStyle({ color: "black", border: "1" });
+        var off_x = cig.label.length;
+        _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
+        marker.setLabel(_label);
+        map.addOverlay(marker);
+        //动画
+        marker.setAnimation(cig.animation);
+        return marker;
+    };
+
 };
 
 

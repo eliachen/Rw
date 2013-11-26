@@ -55,19 +55,47 @@ body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
     //获取站点信息:站点编号，站点名称,经度，纬度，附加信息
     var MapDeal = function (data) {
         $.each(data, function (index, item) {
-
+            //正常测站
             var makersrc = "../../lib/ligerUI/skins/icons/maker/pin-location-green.png";
+            var makersrcAlm= "../../lib/ligerUI/skins/icons/maker/pin-location-red.png";
+
+            //演示~~~！！！
+            if(index%4==0){
+                var tmpmaker = addMaker(map, new BMap.Point(item.LGTD, item.LTTD), {img:makersrc,label:item.STNM,animation:BMAP_ANIMATION_DROP});
+            }else{
+                var tmpmaker = addMaker(map, new BMap.Point(item.LGTD, item.LTTD), {img:makersrcAlm,label:item.STNM,animation:BMAP_ANIMATION_BOUNCE});
+            };
+
             //添加maker
-            var tmpmaker = addMaker(map, new BMap.Point(item.LGTD, item.LTTD), makersrc, item.STNM);
+            //var tmpmaker = addMaker(map, new BMap.Point(item.LGTD, item.LTTD), {img:makersrc,label:item.STNM,animation:BMAP_ANIMATION_DROP});
 
             //修饰maker:
             //信息显示：鼠标移动动作
             var tipid = null;
             tmpmaker.addEventListener("mouseover", function (e) {
-                var content = "<div>站名:" + item.STNM + "</div>"
-                                + "<div>站址:" + item.STLC + "</div>"
-                                + "<div>管理单位：" + item.ADMAUTH + "</div>";
+                //演示over的还原
+                //var content =     "<div><p style=color:black>站名:" + item.STNM + "</p></div>"
+                //                + "<div><p style=color:black>站址:" + item.STLC + "</p></div>"
+                //                + "<div><p style=color:black>管理单位：" + item.ADMAUTH + "</p></div>";
 
+                //演示~~~！！！
+                var content;
+                if(index%4==0){
+                    content =     "<div><p style=color:black>站名:" + item.STNM + "</p></div>"
+                                + "<div><p style=color:black>站址:" + item.STLC + "</p></div>"
+                                + "<div><p style=color:black>管理单位：" + item.ADMAUTH + "</p></div>";
+
+                }else{
+                    content=        "<div><p style=color:black;text-align:center>站名:" + item.STNM + "</p></div>"+
+                                   "<div><p style=color:black;text-align:center>站址:" + item.STLC + "</p></div>" + 
+                                   "<div><p style=color:black;text-align:center>管理单位：" + item.ADMAUTH + "</p></div>"+
+                                   "<div><p style=color:red;text-align:center>----------</p></div>" +
+                                   "<div><p style=color:red;text-align:center>!!!降雨量报警!!!</p></div>" +
+                                   "<div><p style=color:red;text-align:center>类型:暴雨</p></div>" +
+                                   "<div><p style=color:red;text-align:center>----------</p></div>" +
+                                   "<div><p style=color:red;text-align:center>!!!水位超限报警!!!</p></div>"+
+                                   "<div><p style=color:red;text-align:center>类型:超历史水位(+1.5m)</p></div>"
+                }
                 tipid = $.ligerTip({ content: content, width: 200, x: e.clientX, y: e.clientY }).id;
             });
 

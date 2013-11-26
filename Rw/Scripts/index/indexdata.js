@@ -1,10 +1,9 @@
-﻿
+﻿/// <reference path="../../Views/InfRainAndWater/Config/RwAlmCig.aspx" />
+
 var indexdata =
 [
      { text: "信息图", isexpand: "true", children: [
-		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" },
-        { url: "/InfRainAndWater/RainAndWater", text: "土壤墒情图" },
-        { url: "/InfRainAndWater/RainAndWater", text: "土壤墒情图" }
+		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" }
 	 ]
      },
     { text: "数据图表", isexpand: "true", children: [
@@ -18,10 +17,13 @@ var indexdata =
           { url: "/InfPumpStation?id=PumpStationVideo", text: "泵站视频监控" }
          ]
      },
-    { text: "基础数据管理", isexpand: "true", children: [
+    {
+        text: "基础数据管理", isexpand: "true", children: [
+        { url: "/InfRainAndWater/Index?id=Config/RwAlmCig", text: "雨水情报警数据设置" },
         { url: "/InfRainAndWater/Index?id=Rain/RainOriginalTable", text: "雨情数据表" },
 		{ url: "/InfRainAndWater/Index?id=Water/WaterOriginalTable", text: "水情数据表" },
 		{ url: "/InfBasicData/Index/Station", text: "测站信息维护" }
+       
 	]
     }
 ];

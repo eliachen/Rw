@@ -37,12 +37,13 @@
         };
 
 
-        //Grid的列对应
+     //Grid的列对应
     var GridColumns = {
         //列映射
         mapcolums: [],
             //排序列
-            sortName: ""
+        sortName: "",
+        griddata:null
         };
 
         var SearchField = {
@@ -56,7 +57,7 @@
 
     var GridUrl = {
         //数据
-        gdata: "",
+        gdata: null,
         //数据搜索地址
         gsearchdata:"",
         //数据处理表单
@@ -137,8 +138,8 @@
 
         //设置数据
         Grid = $("#Grid").ligerGrid({
-            url: GridUrl.gdata,
-            dataAction: "server",
+            url: GridUrl.gdata || "",
+            dataAction: function () { if (GridUrl.gdata) { return "server" } else { return "local" } }(),
             columns: GridColumns.mapcolums,
             toolbar: GridToolBar,
             pageSize: 20, sortName: GridColumns.sortName, enabledEdit: true, clickToEdit: false,
@@ -147,7 +148,8 @@
             //设置数据类型
             parms: { pagetype: "data" },
             //服务器获取数据
-            onSuccess: QueryData
+            onSuccess: QueryData,
+            data: function () { if (GridUrl.gdata) { return null } else { return GridColumns.griddata } }()
         });
     };
 

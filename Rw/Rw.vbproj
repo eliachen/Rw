@@ -258,6 +258,7 @@
     <Content Include="Views\InfPumpStation\PumpStationVideo.aspx" />
     <Content Include="Views\InfPumpStation\PumpStation.aspx" />
     <Content Include="TempWebForm\WebForm1.aspx" />
+    <Content Include="Views\InfRainAndWater\Config\RwAlmCig.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
