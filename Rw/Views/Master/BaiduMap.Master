@@ -1,0 +1,60 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="BaiduMap.master.vb" Inherits="Rw.BaiduMap" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <%--百度地图的引用--%>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204"></script>
+    <%--百度地图的帮助类--%>
+    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js?new Date()"></script>
+    
+     <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+         #maptitle {
+             font-family: 宋体 Arial, Helvetica, sans-serif; 
+             font-size: 30px; 
+             font-weight: bold; 
+             color: #FFFF00;
+         }
+
+    </style>
+    <asp:ContentPlaceHolder ID="jq" runat="server" />
+
+    <asp:ContentPlaceHolder ID="js" runat="server"/>
+
+    <script type="text/javascript">
+        var bdmap;
+       
+        var bdmapcig = [];
+        var Initial = function (title) {
+            // 百度地图API功能
+            bdmap = new BMap.Map("allmap",{ mapType: BMAP_HYBRID_MAP });
+            var point = new BMap.Point(116.403765, 39.914850);
+            //bdmap.centerAndZoom(point, 12);
+            bdmap.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+            bdmap.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+            bdmap.enableScrollWheelZoom();                            //启用滚轮放大缩小
+            bdmap.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+
+            //设置标题
+            $("#maptitle").html(title);
+            addCtrl(bdmap, "title", BMAP_ANCHOR_TOP_LEFT, new BMap.Size(25, 15));
+            
+        };
+
+    </script>
+
+</head>
+<body>
+    <div id="allmap">
+    </div>
+    <div id="title" style="height:50px;width:500px">
+              <p id="maptitle" 
+                  style=""></p>
+    </div>
+    <asp:ContentPlaceHolder ID="content" runat="server"/>
+</body>
+</html>

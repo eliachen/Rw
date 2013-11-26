@@ -13,12 +13,15 @@ function addMaker(map, point, imgpath,label) {
     //设置label
     var _label = new BMap.Label("");
     _label.setContent(label);
-    _label.setStyle({ color: "black" ,border:"0"});
-    _label.setOffset(new BMap.Size(5, 25));
+    _label.setStyle({ color: "black", border: "1" });
+    var off_x = label.length;
+    _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
     marker.setLabel(_label);
     map.addOverlay(marker);
     return marker;
 };
+
+
 /// <reference path="../../lib/ligerUI/skins/icons/true.gif" />
 
 //map:地图

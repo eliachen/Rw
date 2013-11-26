@@ -1,11 +1,13 @@
 ﻿
 var indexdata =
 [
-     { text: "水雨情信息", isexpand: "true", children: [
-		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监视图" }
+     { text: "信息图", isexpand: "true", children: [
+		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" },
+        { url: "/InfRainAndWater/RainAndWater", text: "土壤墒情图" },
+        { url: "/InfRainAndWater/RainAndWater", text: "土壤墒情图" }
 	 ]
      },
-    { text: "水雨情数据图表", isexpand: "true", children: [
+    { text: "数据图表", isexpand: "true", children: [
 		{ url: "/InfRainAndWater/Index?id=Rain/RainReportData", text: "雨情信息图表" },
 		{ url: "/InfRainAndWater/Index?id=Water/WaterReportData", text: "水情信息图表" }
 	]

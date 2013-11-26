@@ -9,7 +9,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
  <!--百度地图相关-->
-    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js" type="text/javascript"></script>
+    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js?new Date()" type="text/javascript"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204"></script>
 
      <%--<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>--%>
@@ -277,8 +277,6 @@ body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
             LigerUIHelper.tip("无法加载百度地图,请检测检测网络状况或刷新该页面!");
         }
 
-
-       
 
         //树节点加载
         LigerUIHelper.ajax({ loading: "加载雨水情测站信息.....",

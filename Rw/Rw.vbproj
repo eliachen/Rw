@@ -205,6 +205,13 @@
       <DependentUpon>WebFormVideo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Views\Master\BaiduMap.Master.designer.vb">
+      <DependentUpon>BaiduMap.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\BaiduMap.Master.vb">
+      <DependentUpon>BaiduMap.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Views\Master\Form.Master.designer.vb">
       <DependentUpon>Form.Master</DependentUpon>
     </Compile>
@@ -226,6 +233,13 @@
       <DependentUpon>ReportData.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="TempWebForm\WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempWebForm\WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -236,9 +250,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.css" />
+    <Content Include="jQuery.jPlayer\css\jPlayer.css" />
+    <Content Include="jQuery.jPlayer\jquery.jplayer.inspector.js" />
     <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
+    <Content Include="lib\jquery\jquery-1.10.2.min.js" />
     <Content Include="Views\InfPumpStation\PumpStationVideo.aspx" />
     <Content Include="Views\InfPumpStation\PumpStation.aspx" />
+    <Content Include="TempWebForm\WebForm1.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -253,8 +272,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Rw.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.css" />
-    <Content Include="jQuery.jPlayer\css\jplayer.blue.monday.jpg" />
     <Content Include="jQuery.jPlayer\main.js" />
     <Content Include="lib\jquery\jquery-1.6.2.min.js" />
     <Content Include="packages.config" />
@@ -305,6 +322,7 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Views\Master\BaiduMap.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -662,7 +680,9 @@
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
