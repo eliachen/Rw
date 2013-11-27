@@ -35,28 +35,27 @@
             {
                 display: '测站基本信息',fronze:true, columns:
                     [
-                        { display: '测站编号', name: 'STCD', align: 'left', width: 220, fronze: true },
-                        { display: '测站名称', name: 'STNM', align: 'left', width: 220, fronze: true }
+                        { display: '测站编号', name: 'STCD', width: 220, fronze: true },
+                        { display: '测站名称', name: 'STNM',  width: 220, fronze: true }
                     ]
             },
             { display: '水情报警设置', columns:
                 [
-                    { display: '警戒水位', name: 'CustomerID', align: 'left', width: 220 },
-                    { display: '保证水位', name: 'ContactName', width: 240, align: 'left' },
-                    { display: '超出水位', name: 'City', width: 240 }
+                    { display: '警戒水位', name: 'WARNINGWATERLEVEL',  width: 220 },
+                    { display: '保证水位', name: 'GUARWATERLEVEL', width: 240 },
+                    { display: '超出水位', name: 'BEYONDWATERLEVEL', width: 240 }
                 ]
             },
             { display: '雨情报警设置', columns: [
-                       { display: '降雨级别', name: 'CustomerID', align: 'left', width: 220 },
-                       { display: '当天降雨累计', name: 'ContactName', width: 240, align: 'left' },
-                       { display: '当月降雨累计', name: 'City', width: 240 }
+                       { display: '降雨级别', name: 'RAINLEVEL',  width: 220 },
+                       { display: '自定义', name: 'RAINDIY', width: 240 }
                 ]
             }
 
         ];
 
         //无设置服务器地址则是本地
-        GridColumns.griddata = CustomersData;
+        GridColumns.griddata = { Rows: [{STCD:1,STNM:"林泽琛",WARNINGWATERLEVEL:"101.23",GUARWATERLEVEL:"123.21",BEYONDWATERLEVEL:"113.2",RAINLEVEL:"1",RAINDIY:2}]};
 
 
        
@@ -96,6 +95,7 @@
 
         $(function () {
             InitialGridSet();
+            //Grid.setData({ data: CustomersData });
             //Grid.loadData(null, false, CustomersData);
 
         });

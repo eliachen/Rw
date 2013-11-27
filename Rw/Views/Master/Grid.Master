@@ -23,7 +23,6 @@
     <script type="text/javascript">
         //测站数据表格
         var Grid;
-
         //弹窗
         var GridDialog;
         //Grid样式类型  
