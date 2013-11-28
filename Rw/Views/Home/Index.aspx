@@ -9,7 +9,7 @@
     <script src="../../lib/ligerUI/js/ligerui.all.js" type="text/javascript"></script>
     <script src="../../lib/ligerUI/js/plugins/ligerTree.js" type="text/javascript"></script>
    <%-- 主目录索引--%>
-    <script src="../../Scripts/index/indexdata.js" type="text/javascript"></script>
+    <script src="../../Scripts/index/indexdata.js?new Date()" type="text/javascript"></script>
 
     <script type="text/javascript">
             var tab = null;

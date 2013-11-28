@@ -157,6 +157,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DefaultController.vb" />
     <Compile Include="Controllers\InfBasicDataController.vb" />
+    <Compile Include="Controllers\InfMeteorologicalController.vb" />
     <Compile Include="Controllers\InfPumpStationController.vb" />
     <Compile Include="Controllers\InfRainAndWaterController.vb" />
     <Compile Include="Global.asax.vb">
@@ -255,6 +256,7 @@
     <Content Include="jQuery.jPlayer\jquery.jplayer.inspector.js" />
     <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
     <Content Include="lib\jquery\jquery-1.10.2.min.js" />
+    <Content Include="Views\InfMeteorological\Meteorological.aspx" />
     <Content Include="Views\InfPumpStation\PumpStationVideo.aspx" />
     <Content Include="Views\InfPumpStation\PumpStation.aspx" />
     <Content Include="TempWebForm\WebForm1.aspx" />

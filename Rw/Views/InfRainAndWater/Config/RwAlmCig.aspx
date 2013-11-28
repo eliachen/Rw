@@ -16,8 +16,8 @@
 
 
         var cigData = {
-            Rows: [{ TIMETYPE: 'h', ACTIVETIME: '2', DRPSUM: '300', DIYINF: '2小时降雨超过300mm报警', CIG: 'h;2;300;2小时降雨超过300mm报警' },
-                   { TIMETYPE: 'd', ACTIVETIME: '2', DRPSUM: '200', DIYINF: '2天降雨超过200mm报警', CIG: 'd;2;200;2天降雨超过200mm报警' }]
+            Rows: [{ TIMETYPE: 'h', ACTIVETIME: '2', DRPSUM: '300', DIYINF: '2小时降雨超过300mm报警', CIG: 'h/2/300/2小时降雨超过300mm报警' },
+                   { TIMETYPE: 'd', ACTIVETIME: '2', DRPSUM: '200', DIYINF: '2天降雨超过200mm报警', CIG: 'd/2/200/2天降雨超过200mm报警' }]
         };
 
         var diygrid = { 
@@ -73,7 +73,7 @@
             isMultiSelect: true,
             onEndEdit: function (dr) {
                 var tmp = dr.record;
-                this.updateRow(dr.rowindex, { CIG: tmp.TIMETYPE + ';' + tmp.ACTIVETIME + ';' + tmp.DRPSUM + ';' + tmp.DIYINF })
+                this.updateRow(dr.rowindex, { CIG: tmp.TIMETYPE + '/' + tmp.ACTIVETIME + '/' + tmp.DRPSUM + '/' + tmp.DIYINF })
             }
         };
 
@@ -128,7 +128,7 @@
                        {
                            display: '自定义',name: 'RAINDIY', type: "text", width: 400,
                            editor: {
-                               type: 'select', valueField: 'CIG', textField: 'DIYINF', selectBoxWidth: 450, selectBoxHeight: 240,
+                               type: 'select', valueField: 'CIG', textField: 'CIG', selectBoxWidth: 450, selectBoxHeight: 240,
                                grid: diygrid
                            }
                        }
@@ -144,9 +144,9 @@
         //}
         //无设置服务器地址则是本地
         GridColumns.griddata = {
-            Rows: [{ STCD: '00000001', STNM: "测试站1", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "2小时降雨超过300mm报警" },
-                   { STCD: '00000002', STNM: "测试站2", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "2小时降雨超过300mm报警" },
-                   { STCD: '00000003', STNM: "测试站3", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "2小时降雨超过300mm报警" }]
+            Rows: [{ STCD: '00000001', STNM: "测试站1", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "h/2/300/2小时降雨超过300mm报警;d/2/200/2天降雨超过200mm报警" },
+                   { STCD: '00000002', STNM: "测试站2", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "h/2/300/2小时降雨超过300mm报警" },
+                   { STCD: '00000003', STNM: "测试站3", WARNINGWATERLEVEL: "101.23", GUARWATERLEVEL: "123.21", BEYONDWATERLEVEL: "113.2", RAINLEVEL: 1, RAINDIY: "h/2/300/2小时降雨超过300mm报警" }]
         };
 
 

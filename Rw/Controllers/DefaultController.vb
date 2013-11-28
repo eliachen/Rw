@@ -5,7 +5,6 @@
         ' GET: /Default
         Public Overridable Function Index(ByVal id As String) As ActionResult
             Return View(id)
-            's
         End Function
     End Class
 End Namespace

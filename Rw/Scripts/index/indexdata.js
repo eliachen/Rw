@@ -3,7 +3,8 @@
 var indexdata =
 [
      { text: "信息图", isexpand: "true", children: [
-		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" }
+		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" },
+        { url: "/InfMeteorological?id=Meteorological", text: "气象监视图" }
 	 ]
      },
     { text: "数据图表", isexpand: "true", children: [

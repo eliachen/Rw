@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class BaiduMap
 
     '''<summary>
-    '''jq 控件。
-    '''</summary>
-    '''<remarks>
-    '''自动生成的字段。
-    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    '''</remarks>
-    Protected WithEvents jq As Global.System.Web.UI.WebControls.ContentPlaceHolder
-
-    '''<summary>
     '''js 控件。
     '''</summary>
     '''<remarks>
@@ -30,6 +21,15 @@ Partial Public Class BaiduMap
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
     Protected WithEvents js As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+    '''<summary>
+    '''nav 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents nav As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
     '''<summary>
     '''content 控件。
