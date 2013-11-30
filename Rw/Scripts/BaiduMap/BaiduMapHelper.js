@@ -16,11 +16,12 @@ function addMaker(map, point, cig) {
         var _icon = new BMap.Icon(cig.img, _size);
         var MarkerOptions = { icon: _icon };
         var marker = new BMap.Marker(point, MarkerOptions);
+        //var marker = new BMap.Marker(point);
         //设置label
         if (cig.label) {
             var _label = new BMap.Label("");
             _label.setContent(cig.label);
-            _label.setStyle({ color: "black", border: "1" });
+            _label.setStyle({ color: "black", border: "0" });
             var off_x = cig.label.length;
             _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
             marker.setLabel(_label);

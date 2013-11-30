@@ -2,9 +2,10 @@
 
 var indexdata =
 [
-     { text: "信息图", isexpand: "true", children: [
-		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情监测图" },
-        { url: "/InfMeteorological?id=Meteorological", text: "气象监视图" }
+     { text: "信息监视图", isexpand: "true", children: [
+		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情信息监视图" },
+        { url: "/InfMeteorological?id=Meteorological", text: "气象信息监视图" },
+        { url: "/InfPumpStation?id=PumpStationMap", text: "闸门泵站信息监视图" }
 	 ]
      },
     { text: "数据图表", isexpand: "true", children: [

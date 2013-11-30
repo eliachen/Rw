@@ -59,6 +59,7 @@ body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
             var makersrc = "../../lib/ligerUI/skins/icons/maker/pin-location-green.png";
             var makersrcAlm= "../../lib/ligerUI/skins/icons/maker/pin-location-red.png";
 
+
             //演示~~~！！！
             if(index%4==0){
                 var tmpmaker = addMaker(map, new BMap.Point(item.LGTD, item.LTTD), {img:makersrc,label:item.STNM,animation:BMAP_ANIMATION_DROP});

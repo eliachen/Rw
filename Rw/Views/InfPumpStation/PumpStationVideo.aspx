@@ -5,100 +5,108 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="js" runat="server">
 
-<link href="../jQuery.jPlayer/css/jplayer.blue.monday.css" rel="stylesheet" />
-<script src="../jQuery.jPlayer/jquery.jplayer.min.js"></script>
+    <style>
+        .video {
+            width:100%;
+            height:100%;
+            margin: 0px 0px 0px 0px;
 
-<script src="../Scripts/Video/VideoHelper.js?new Date()"></script>
+        }
+    </style>
+<%--<link href="../jQuery.jPlayer/css/jplayer.blue.monday.css" rel="stylesheet" />
+<script src="../jQuery.jPlayer/jquery.jplayer.min.js"></script>--%>
+
+<%--<script src="../Scripts/Video/VideoHelper.js?new Date()"></script>--%>
     <script type="text/javascript">
         $(function () {
-            InitialLayout(260, "地点信息");
-            eliaVideo({ div: "#v1", path: "/InfPumpStation/PumpVideoData", foot: "测试监控1" });
-            eliaVideo({ div: "#v2", path: "/InfPumpStation/PumpVideoData", foot: "测试监控2" });
-            eliaVideo({ div: "#v3", path: "/InfPumpStation/PumpVideoData", foot: "测试监控3" });
-            eliaVideo({ div: "#v4", path: "/InfPumpStation/PumpVideoData", foot: "测试监控4" });
+            //InitialLayout(260, "地点信息");
 
+            setVideo({ id: '#v1', src: '/InfPumpStation/PumpVideoData', loop: true });
+            setVideo({ id: '#v2', src: '/InfPumpStation/PumpVideoData', loop: true });
+            setVideo({ id: '#v3', src: '/InfPumpStation/PumpVideoData', loop: true });
+            setVideo({ id: '#v4', src: '/InfPumpStation/PumpVideoData', loop: true });
+            setVideo({ id: '#v5', src: '/InfPumpStation/PumpVideoData', loop: true });
+            setVideo({ id: '#v6', src: '/InfPumpStation/PumpVideoData', loop: true });
+
+           
+            InitialLayout(260, "视频监控信息");
+           
 
             var data = [];
-            data.push({ id: 2, text: "测试泵站1" });
-            data.push({ id: 3, text: "测试泵站2" });
-            data.push({ id: 4, text: "测试泵站3" });
-            data.push({ id: 5, text: "测试泵站4" });
-            data.push({ id: 6, text: "测试泵站5" });
-            data.push({ id: 7, text: "测试泵站6" });
-            data.push({ id: 8, text: "测试泵站7" });
-            data.push({ id: 9, text: "测试泵站8" });
+            data.push({ id: 2, text: "测试名称1" });
+            data.push({ id: 3, text: "测试名称2" });
+            data.push({ id: 4, text: "测试名称3" });
+            data.push({ id: 5, text: "测试名称4" });
+            data.push({ id: 6, text: "测试名称5" });
+            data.push({ id: 7, text: "测试名称6" });
+            data.push({ id: 8, text: "测试名称7" });
+            data.push({ id: 9, text: "测试名称8" });
 
-
-            var s = $("#tree1").ligerTree({
-                treeLine: false,
-                checkbox: false,
-                idFieldName: 'id',
-                parentIDFieldName: 'pid',
-                nodeWidth: 140,
-                data: data,
-                isexpand: true,
-                onClick: function (node) {
-                    //settitle(node.data.text);
-                }
-            });
-
-
-            $("#tree2").ligerTree({
-                treeLine: false,
-                checkbox: false,
-                idFieldName: 'id',
-                parentIDFieldName: "pid",
-                nodeWidth: 140,
-                data: data,
-                onClick: function (node) {
-                    //settitle(node.data.text);
-                }
-            });
-
-            $("#tree3").ligerTree({
-                treeLine: false,
-                checkbox: false,
-                idFieldName: 'id',
-                parentIDFieldName: "pid",
-                nodeWidth: 140,
-                data: data,
-                onClick: function (node) {
-                    //settitle(node.data.text);
-                }
-            });
+            for (var index = 1; index < 5; index++)
+            {
+                var s = $("#tree"+index).ligerTree({
+                    treeLine: false,
+                    checkbox: false,
+                    idFieldName: 'id',
+                    parentIDFieldName: 'pid',
+                    nodeWidth: 140,
+                    data: data,
+                    isexpand: true,
+                    onClick: function (node) {
+                        //settitle(node.data.text);
+                    }
+                });
+            }
+           
         });
 
+    </script>
+
+    <script type="text/javascript">
+        var setVideo = function (cig) {
+            $(cig.id).attr("src", cig.src);
+            if (cig.loop) {
+                //$(cig.loop).attr("loop", '20');
+            } else {
+                //$(cig.loop).attr("loop", '20');
+            }
+        };
     </script>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="content" runat="server">
-   <table style="width:100%">
-    <tr>
-        <td><div id="v1"></div></td>
-        <td><div id="v2"></div></td>
-    </tr>
-    <tr>
-        <td height="20px"></td>
-        <td height="20px"></td>
-    </tr>
-    <tr>
-        <td><div id="v3"></div></td>
-        <td><div id="v4"></div></td>
-    </tr>
-</table>
+    <table border="1" style="width:100%;height:100%;margin:0px 0px 0px 0px; border-color:#aecaf0">
+            <tr style="height:30%;">
+                <td colspan="2" rowspan="2"><embed class="video" id="v1"/></td>
+                <td><embed class="video" id="v2"/></td>
+            </tr>
+            <tr style="height:30%;">
+                <td><embed class="video" id="v3"/></td>
+                
+            </tr>
+            <tr style="height:40%;">
+                <td style="width:30%"><embed class="video" id="v4"/></td>
+                <td style="width:30%"><embed class="video" id="v5"/></td>
+                <td style="width:40%"><embed class="video" id="v6"/></td>
+            </tr>
+        </table>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="nav" runat="server">
-    <div id="l1" title="地点1">
+    <div id="l1" title="泵站视频监控">
         <ul id="tree1">
         </ul>
     </div>
-    <div id="l2" title="地点2">
+    <div id="l2" title="闸门视频监控">
         <ul id="tree2">
         </ul>
     </div>
-    <div id="l3" title="地点3">
+    <div id="l3" title="取水点">
         <ul id="tree3">
+        </ul>
+    </div>
+     <div id="l4" title="排污口">
+        <ul id="tree4">
         </ul>
     </div>
 </asp:Content>
