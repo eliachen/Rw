@@ -60,7 +60,7 @@
    
    
 <body>
-    <div id="layoutShow" style="width:99.2%; margin:0 auto; margin-top:1px; ">
+    <div id="layoutShow" style="width:100%; margin:0 auto; margin-top:1px; ">
         <div id="RDContent" position="center" style="overflow-x: auto; overflow-y: auto">
            <asp:ContentPlaceHolder ID="content" runat="server"/>
         </div>

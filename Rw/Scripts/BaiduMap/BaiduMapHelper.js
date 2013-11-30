@@ -17,15 +17,20 @@ function addMaker(map, point, cig) {
         var MarkerOptions = { icon: _icon };
         var marker = new BMap.Marker(point, MarkerOptions);
         //设置label
-        var _label = new BMap.Label("");
-        _label.setContent(cig.label);
-        _label.setStyle({ color: "black", border: "1" });
-        var off_x = cig.label.length;
-        _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
-        marker.setLabel(_label);
+        if (cig.label) {
+            var _label = new BMap.Label("");
+            _label.setContent(cig.label);
+            _label.setStyle({ color: "black", border: "1" });
+            var off_x = cig.label.length;
+            _label.setOffset(new BMap.Size(-3.5 * (off_x - 1), 25));
+            marker.setLabel(_label);
+          
+        };
         map.addOverlay(marker);
         //动画
-        marker.setAnimation(cig.animation);
+        if (cig.animation) {
+            marker.setAnimation(cig.animation);
+        };
         return marker;
     };
 
