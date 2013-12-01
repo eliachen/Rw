@@ -9,7 +9,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
  <!--百度地图相关-->
-    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js?new Date()" type="text/javascript"></script>
+    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204"></script>
 
      <%--<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>--%>
@@ -58,7 +58,9 @@ body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
             //正常测站
             var makersrc = "../../lib/ligerUI/skins/icons/maker/pin-location-green.png";
             var makersrcAlm= "../../lib/ligerUI/skins/icons/maker/pin-location-red.png";
-
+       
+            //var makersrc = "../../lib/ligerUI/skins/icons/map-marker/map-marker-ball-chartreuse.png";
+            //var makersrcAlm= "../../lib/green.jpg";
 
             //演示~~~！！！
             if(index%4==0){

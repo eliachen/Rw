@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Master/LayoutNavRight.Master" Inherits="System.Web.Mvc.ViewPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="jq" runat="server">
-	<script src="../../lib/jquery/jquery-1.6.2.min.js"></script>
+    <script src="../../lib/jquery/jquery-1.6.2.min.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="js" runat="server">
@@ -85,7 +85,7 @@
                 
             </tr>
             <tr style="height:40%;">
-                <td style="width:30%"><embed class="video" id="v4"/></td>
+                <td style="width:30%"><embed class="video" id="v4"  /></td>
                 <td style="width:30%"><embed class="video" id="v5"/></td>
                 <td style="width:40%"><embed class="video" id="v6"/></td>
             </tr>

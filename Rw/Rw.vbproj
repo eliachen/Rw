@@ -160,6 +160,7 @@
     <Compile Include="Controllers\InfMeteorologicalController.vb" />
     <Compile Include="Controllers\InfPumpStationController.vb" />
     <Compile Include="Controllers\InfRainAndWaterController.vb" />
+    <Compile Include="Controllers\InfRiverAndReservoirController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -199,11 +200,32 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="TempWebForm\WebForm2.aspx.designer.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempWebForm\WebForm2.aspx.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TempWebForm\WebForm3.aspx.designer.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempWebForm\WebForm3.aspx.vb">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="TempWebForm\WebFormNewVideo.aspx.designer.vb">
       <DependentUpon>WebFormNewVideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="TempWebForm\WebFormNewVideo.aspx.vb">
       <DependentUpon>WebFormNewVideo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TempWebForm\WebFormTestMap.aspx.designer.vb">
+      <DependentUpon>WebFormTestMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempWebForm\WebFormTestMap.aspx.vb">
+      <DependentUpon>WebFormTestMap.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="TempWebForm\WebFormVideo.aspx.designer.vb">
@@ -213,25 +235,11 @@
       <DependentUpon>WebFormVideo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Views\Master\BaiduMap.Master.designer.vb">
-      <DependentUpon>BaiduMap.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Master\BaiduMap.Master.vb">
-      <DependentUpon>BaiduMap.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Views\Master\Form.Master.designer.vb">
       <DependentUpon>Form.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\Master\Form.Master.vb">
       <DependentUpon>Form.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Master\LayoutNavRight.Master.designer.vb">
-      <DependentUpon>LayoutNavRight.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Master\LayoutNavRight.Master.vb">
-      <DependentUpon>LayoutNavRight.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Master\ReportData.Master.designer.vb">
@@ -265,7 +273,37 @@
     <Content Include="jQuery.jPlayer\css\jPlayer.css" />
     <Content Include="jQuery.jPlayer\jquery.jplayer.inspector.js" />
     <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
+    <Content Include="lib\green.jpg" />
     <Content Include="lib\images\demo\pic_yt.jpg" />
+    <Content Include="lib\images\loading.gif" />
+    <Content Include="lib\images\top.jpg" />
+    <Content Include="lib\images\topicon.gif" />
+    <Content Include="lib\images\weather\300.png" />
+    <Content Include="lib\images\weather\301.png" />
+    <Content Include="lib\images\weather\302.png" />
+    <Content Include="lib\images\weather\303.png" />
+    <Content Include="lib\images\weather\304.png" />
+    <Content Include="lib\images\weather\305.png" />
+    <Content Include="lib\images\weather\306.png" />
+    <Content Include="lib\images\weather\307.png" />
+    <Content Include="lib\images\weather\308.png" />
+    <Content Include="lib\images\weather\309.png" />
+    <Content Include="lib\images\weather\310.png" />
+    <Content Include="lib\images\weather\311.png" />
+    <Content Include="lib\images\weather\312.png" />
+    <Content Include="lib\images\weather\313.png" />
+    <Content Include="lib\images\weather\314.png" />
+    <Content Include="lib\images\weather\315.png" />
+    <Content Include="lib\images\weather\316.png" />
+    <Content Include="lib\images\weather\317.png" />
+    <Content Include="lib\images\weather\318.png" />
+    <Content Include="lib\images\weather\319.png" />
+    <Content Include="lib\images\weather\320.png" />
+    <Content Include="lib\images\weather\321.png" />
+    <Content Include="lib\images\weather\322.png" />
+    <Content Include="lib\images\weather\323.png" />
+    <Content Include="lib\images\weather\324.png" />
+    <Content Include="lib\images\weather\325.png" />
     <Content Include="lib\jquery\jquery-1.10.2.min.js" />
     <Content Include="lib\ligerUI\skins\icons\map-marker\map-marker-ball-azure.png" />
     <Content Include="lib\ligerUI\skins\icons\map-marker\map-marker-ball-chartreuse.png" />
@@ -345,34 +383,11 @@
     <Content Include="lib\ligerUI\skins\icons\map-marker\map-marker-push-pin-2-right-azure.png" />
     <Content Include="lib\ligerUI\skins\icons\map-marker\map-marker-push-pin-2-right-chartreuse.png" />
     <Content Include="lib\ligerUI\skins\icons\map-marker\map-marker-push-pin-2-right-pink.png" />
-    <Content Include="lib\ligerUI\skins\icons\map-marker\readme.html" />
-    <Content Include="lib\images\weather\300.png" />
-    <Content Include="lib\images\weather\301.png" />
-    <Content Include="lib\images\weather\302.png" />
-    <Content Include="lib\images\weather\303.png" />
-    <Content Include="lib\images\weather\304.png" />
-    <Content Include="lib\images\weather\305.png" />
-    <Content Include="lib\images\weather\306.png" />
-    <Content Include="lib\images\weather\307.png" />
-    <Content Include="lib\images\weather\308.png" />
-    <Content Include="lib\images\weather\309.png" />
-    <Content Include="lib\images\weather\310.png" />
-    <Content Include="lib\images\weather\311.png" />
-    <Content Include="lib\images\weather\312.png" />
-    <Content Include="lib\images\weather\313.png" />
-    <Content Include="lib\images\weather\314.png" />
-    <Content Include="lib\images\weather\315.png" />
-    <Content Include="lib\images\weather\316.png" />
-    <Content Include="lib\images\weather\317.png" />
-    <Content Include="lib\images\weather\318.png" />
-    <Content Include="lib\images\weather\319.png" />
-    <Content Include="lib\images\weather\320.png" />
-    <Content Include="lib\images\weather\321.png" />
-    <Content Include="lib\images\weather\322.png" />
-    <Content Include="lib\images\weather\323.png" />
-    <Content Include="lib\images\weather\324.png" />
-    <Content Include="lib\images\weather\325.png" />
+    <Content Include="TempWebForm\HtmlPageTestMap.html" />
+    <Content Include="TempWebForm\WebForm2.aspx" />
+    <Content Include="TempWebForm\WebForm3.aspx" />
     <Content Include="TempWebForm\WebFormNewVideo.aspx" />
+    <Content Include="TempWebForm\WebFormTestMap.aspx" />
     <Content Include="Views\InfMeteorological\Meteorological.aspx" />
     <Content Include="Views\InfMeteorological\WeatherQuery.aspx" />
     <Content Include="Views\InfMeteorological\MeteorologicalQuery.aspx" />
@@ -381,11 +396,16 @@
     <Content Include="Views\InfPumpStation\PumpStation.aspx" />
     <Content Include="TempWebForm\WebForm1.aspx" />
     <Content Include="Views\InfRainAndWater\Config\RwAlmCig.aspx" />
+    <Content Include="Views\InfRainAndWater\test.aspx" />
+    <Content Include="Views\InfRainAndWater\test2.aspx" />
+    <Content Include="Views\InfRainAndWater\test3.aspx" />
+    <Content Include="Views\InfRiverAndReservoir\RiverAndReservoirMap.aspx" />
+    <Content Include="Views\InfRiverAndReservoir\swAndllQuery.aspx" />
+    <Content Include="Views\InfRiverAndReservoir\swAndkrQuery.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="ichartjs\README.md" />
-    <None Include="lib\ligerUI\skins\icons\新建 Microsoft Office Excel 工作表.xlsx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -440,12 +460,14 @@
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <None Include="My Project\PublishProfiles\配置文件1.pubxml" />
-    <Content Include="Views\Master\LayoutNavRight.Master" />
     <None Include="My Project\Settings.settings">
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Views\Master\QueryNew.Master" />
+    <Content Include="Views\Master\SiteTest.Master" />
+    <Content Include="Views\Master\LayoutNavRight.Master" />
     <Content Include="Views\Master\BaiduMap.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -461,9 +483,6 @@
     <Content Include="eCharts\echarts-original.js" />
     <Content Include="eCharts\echarts.js" />
     <Content Include="eCharts\esl.js" />
-    <Content Include="lib\images\loading.gif" />
-    <Content Include="lib\images\top.jpg" />
-    <Content Include="lib\images\topicon.gif" />
     <Content Include="lib\jquery-validation\jquery.metadata.js" />
     <Content Include="lib\jquery-validation\jquery.validate.min.js" />
     <Content Include="lib\jquery-validation\messages_cn.js" />

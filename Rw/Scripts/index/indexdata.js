@@ -5,7 +5,8 @@ var indexdata =
      { text: "信息监视图", isexpand: "true", children: [
 		{ tabid: "home", url: "/InfRainAndWater/RainAndWater", text: "雨水情信息监视图" },
         { url: "/InfMeteorological?id=Meteorological", text: "气象信息监视图" },
-        { url: "/InfPumpStation?id=PumpStationMap", text: "闸门泵站信息监视图" }
+        { url: "/InfPumpStation?id=PumpStationMap", text: "闸门与泵站信息监视图" },
+        { url: "/InfRiverAndReservoir?id=RiverAndReservoirMap", text: "河道与水库信息监视图" }
 	 ]
      },
     { text: "数据图表", isexpand: "true", children: [
@@ -14,9 +15,9 @@ var indexdata =
 	]
     },
      {
-          text: "泵站监控", isexpand: "true", children: [
-          { url: "/InfPumpStation?id=PumpStation", text: "泵站数据信息一览" },
-          { url: "/InfPumpStation?id=PumpStationVideo", text: "泵站视频监控" }
+          text: " 视频监控", isexpand: "true", children: [
+          { url: "/InfPumpStation?id=PumpStationVideo", text: "视频监控中心" }
+          //{ url: "/InfPumpStation?id=PumpStation", text: "泵站数据信息一览" }
          ]
      },
     {

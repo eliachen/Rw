@@ -1,0 +1,89 @@
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <asp:ContentPlaceHolder ID="jq" runat="server" />
+
+    <link href="../../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" /> 
+    <script src="../../lib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+    <%--图表需求--%>
+    <script src="../../eCharts/esl.js" type="text/javascript"></script>
+    <script src="../../Scripts/Charts/eChartsHelper.js" type="text/javascript"></script>
+
+    <%-- 异步数据加载 --%>
+    <script src="../../Scripts/LigerUI/AjaxHelper.js" type="text/javascript"></script>
+
+    <script  type="text/javascript">
+        //图表命名空间
+        var ECharts;
+
+        //初始化布局
+        var InitialLayOut = function (opt) {
+            //{ bottomHeight: 25, space: 2, allowBottomResize: false }
+            $("#layoutChart").ligerLayout(opt);
+        };
+
+    </script>
+
+    <script type="text/javascript">
+        //绘图
+        var DrawChart = function (chartept) {
+            eChartsHelper_GetChart(function (ec) {
+                var Chart = ec.init(document.getElementById('graph'));
+              
+                 Chart.showLoading({
+                                    text: "数据加载中.....",    //loading话术
+                                    effect: 'bubble'
+                 });
+
+                 Chart.setOption(chartept);
+
+                 Chart.hideLoading();
+
+            });
+        };
+
+        //异步加载数据
+      var QueryAndDraw  =  function (DoOpts) {
+            LigerUIHelper.ajax({
+                loding: '正在加载图表数据.....',
+                url: DoOpts.url,
+                data: { _stcd: stcd, _startTime: startTime, _endTime: endTime },
+                success: function (recvdata) {
+                    var ChartData = DoOpts.DealData(recvdata);
+                    var ept = {
+                        type: 'bar',
+                        title: DoOpts.title || '错误',
+                        X:{
+                             xdata:ChartData.xdata, xname: DoOpts.xname|| '时间'
+                           },
+                        Y: { 
+                        ydata: ChartData.ydata, yname:DoOpts.yname || '降雨量'
+                        }
+                        };
+                        //绘图
+                        var tmp=DrawChart(ept);
+                    },
+                    error:function(msg){
+                        DrawChartShowLoding('无数据.....');
+                        //提升错误信息
+                        LigerUIHelper.tip(msg);
+                    }
+
+            });
+        };
+
+    </script>
+  
+    <asp:ContentPlaceHolder ID="js" runat="server" />
+</head>
+<body>
+  <div id="layoutChart" style="width:100%;overflow-x:hidden;overflow-y:hidden;">
+    <div position="center"  id="graph"></div>
+    <asp:ContentPlaceHolder ID="content" runat="server" />
+   <%-- <div position="bottom"></div>--%>
+   </div>
+</body>
+</html>

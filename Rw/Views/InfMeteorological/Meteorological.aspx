@@ -36,7 +36,6 @@
     <script type="text/javascript">
         $(function () {
 
-
             InitialLayout(260, '气象测点信息');
             Initial('安徽省测站卫星云图信息');
             getBoundary(bdmap, "安徽省");

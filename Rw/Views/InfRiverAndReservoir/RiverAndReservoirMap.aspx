@@ -33,6 +33,7 @@
             height:100%;
             text-align: center;
             border-color: #FFC340;
+           
         }
         .auto-style1 {
             width: 40px;
@@ -42,8 +43,8 @@
         $(function () {
 
 
-            InitialLayout(260, '泵闸测点信息');
-            Initial('安徽省泵闸监视信息图');
+            InitialLayout(260, '河道与水库测点信息');
+            Initial('安徽省河道与水库监视信息图');
             getBoundary(bdmap, "安徽省");
 
             var makers = [];
@@ -57,41 +58,38 @@
                 var s = new BMap.Marker('', '');
                 //鼠标移动上去
                 item.addEventListener('mouseover', function (e) {
-                    var tmpcontent = "<div class=\"imgmid\" style=\" width:180px; height:110px\">" +
-                   "            <table border=1 class=\"tb\">" +
-                   "                <tr>" +
-                   "                     <td width:25%>名称</td>" +
-                   "                     <td colspan=\"3\">某测试泵站名称</td>" +
-                   "                </tr>" +
-                   "                <tr>" +
-                   "                     <td width:25%>编号</td>" +
-                   "                     <td colspan=\"3\">95270001</td>" +
-                   "                </tr>" +
-                   "                <tr>" +
-                   "                     <td width:25%>类型</td>" +
-                   "                     <td colspan=\"3\">泵站</td>" +
-                   "                </tr>" +
-                   "                 <tr>" +
-                   "                     <td width:25%>管理单位</td>" +
-                   "                     <td colspan=\"3\">安徽省泵群协会</td>" +
-                   "                </tr>" +
-                   "                <tr>" +
-                   "                    <td rowspan=\"2\" width:25%>数据信息</td>" +
-                   "                    <td width:25%>水位</td>" +
-                   "                    <td width:25%>用电量</td>" +
-                   "                    <td width:25%>流量</td>" +
-                   "                </tr>" +
-                   "                <tr>" +
-                   "                    <%--<td width:25%>泵站</td>--%>" +
-                   "                    <td width:25%>132m</td>" +
-                   "                    <td width:25%>300kw•h</td>" +
-                   "                    <td width:25%>11m³/h</td>" +
-                   "                </tr>" +
-                   "            </table>" +
-                   "        </div>";
+
+                    var tmpcontent =
+                    "       <div class=\"imgmid\" style=\"width:180px; height:180px\">" +
+                    "            <table border=\"1\" class=\"tb\">" +
+                    "                 <tr>" +
+                    "                    <td width:20% >测站编号</td>" +
+                    "                    <td colspan=\"3\" width:20%>00009527</td>" +
+                    "                </tr>" +
+                    "                <tr>" +
+                    "                    <td width:20% >名称</td>" +
+                    "                    <td colspan=\"3\" width:20%>XXX河道</td>" +
+                    "                </tr>" +
+                    "                <tr>" +
+                    "                    <td width:20% >类型</td>" +
+                    "                    <td colspan=\"3\" width:20%>河道</td>" +
+                    "                </tr>" +
+                    "                <tr>" +
+                    "                    <td width:20% colspan=\"2\" rowspan=\"2\" >河道信息</td>" +
+                    "                    <td width:20%>流量</td>" +
+                    "                    <td width:20%>水位</td>" +
+                    "                </tr>" +
+                    "               " +
+                    "                 <tr>" +
+                    "                    <td width:20%>2000m³/s</td>" +
+                    "                    <td width:20%>132m</td>" +
+                    "                </tr>" +
+                    "            </table>" +
+                    "       </div>";
 
 
-                    var tmpid = $.ligerTip({ content: tmpcontent, width: 200, x: e.Pa.x, y: e.Pa.y }).id;
+
+                    var tmpid = $.ligerTip({ content: tmpcontent, width: 190, x: e.Pa.x, y: e.Pa.y }).id;
 
                     //鼠标移走
                     item.addEventListener('mouseout', function (e) {
@@ -106,12 +104,12 @@
                     //菜单关联
                     var ContextMenu = new BMap.ContextMenu;
 
-                    ContextMenu.addItem(new BMap.MenuItem("泵站信息", function () {
-                        openDetailDialog({ type: 'p', title: '泵站监测信息' });
+                    ContextMenu.addItem(new BMap.MenuItem("流量与水位信息", function () {
+                        openDetailDialog({ type: '1', title: '流量与水位信息' });
                     }));
 
-                    ContextMenu.addItem(new BMap.MenuItem("闸门信息", function () {
-                        openDetailDialog({ type: 'g', title: '闸门监测信息' });
+                    ContextMenu.addItem(new BMap.MenuItem("库容与水位信息", function () {
+                        openDetailDialog({ type: '2', title: '库容与水位信息' });
                     }));
 
                     item.addContextMenu(ContextMenu);
@@ -154,9 +152,6 @@
 
                 }
             });
-
-
-
         });
 
     </script>
@@ -164,34 +159,64 @@
 
         var openDetailDialog = function (cig) {
             switch (cig.type) {
-                case 'p':
-                   
+                case '1':
+                    $.ligerDialog.open({
+                        height: 430, width: 650, left: 0, top: 0, url: 'InfRiverAndReservoir?id=swAndkrQuery',
+                        showMax: false, showToggle: false, showMin: true, isResize: true,
+                        modal: false, title: cig.title
+                    });
                     break;
-                case 'g':
-                    
+                case '2':
+                    $.ligerDialog.open({
+                        height: 430, width: 650, left: 0, top: 0, url: 'InfRiverAndReservoir?id=swAndllQuery',
+                        showMax: false, showToggle: false, showMin: true, isResize: true,
+                        modal: false, title: cig.title
+                    });
                     break;
             }
 
-            $.ligerDialog.open({
-                height: 540, width: 830, left: 0, top: 0, url: '/InfPumpStation?id=PumpStation',
-                showMax: true, showToggle: false, showMin: true, isResize: true,
-                modal: false, title: cig.title
-            });
+           
         };
     </script>
     
 </asp:content>
 
-
 <asp:content runat="server" contentplaceholderid="content">
-        
+    <div style="width:210px; height:200px">
+       <div class="imgmid" style="width:180px; height:180px">
+            <table border="1" class="tb">
+                 <tr>
+                    <td width:20% >测站编号</td>
+                    <td colspan="3" width:20%>00009527</td>
+                </tr>
+                <tr>
+                    <td width:20% >名称</td>
+                    <td colspan="3" width:20%>XXX河道</td>
+                </tr>
+                <tr>
+                    <td width:20% >类型</td>
+                    <td colspan="3" width:20%>河道</td>
+                </tr>
+                <tr>
+                    <td width:20% colspan="2" rowspan="2" >河道信息</td>
+                    <td width:20%>流量</td>
+                    <td width:20%>水位</td>
+                </tr>
+               
+                 <tr>
+                    <td width:20%>2000m³/s</td>
+                    <td width:20%>132m</td>
+                </tr>
+            </table>
+       </div>
+   </div>
 </asp:content>
 <asp:content runat="server" contentplaceholderid="nav">
-    <div id="station1" title="闸门信息">
+    <div id="station1" title="河道信息">
 
     </div>
 
-    <div id="station2" title="泵站信息">
+    <div id="station2" title="水库信息">
 
     </div>
 </asp:content>

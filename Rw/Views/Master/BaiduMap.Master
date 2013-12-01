@@ -1,6 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="BaiduMap.master.vb" MasterPageFile="~/Views/Master/LayoutNavRight.Master" Inherits="Rw.BaiduMap" %>
-
-
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" MasterPageFile="~/Views/Master/LayoutNavRight.Master" %>
 
 <asp:Content ContentPlaceHolderID="jq" runat="server">
     <script src="../../lib/jquery/jquery-1.6.2.min.js"></script>
@@ -10,9 +8,14 @@
     <%--百度地图的引用--%>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204"></script>
     <%--百度地图的帮助类--%>
-    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js?new Date()"></script>
+    <script src="../../Scripts/BaiduMap/BaiduMapHelper.js"></script>
     <style type="text/css">
-        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+         #allmap {
+             width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  margin:0;
+         }
          #maptitle {
              font-family: 宋体 Arial, Helvetica, sans-serif; 
              font-size: 30px; 

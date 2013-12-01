@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Views/Master/LayoutNavRight.Master" Inherits="System.Web.Mvc.ViewPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="jq" runat="server">
-	<script src="../../lib/jquery/jquery-1.6.2.min.js"></script>
+    <script src="../../lib/jquery/jquery-1.6.2.min.js"></script>
 
 </asp:Content>
 
@@ -16,7 +16,10 @@
         $(function () {
             //初始化树
             InitialpumpstaTree();
-            InitialLayout(260, "泵站信息");
+
+            //布局初始化右面不展开
+            isRightCollapse = true;
+            InitialLayout(260, "泵闸站信息");
             //初始化表单结构及其数据
             InitialpumpstaForm();
             //设置初始标题
@@ -28,7 +31,7 @@
             simulateData();
             setInterval(function () {
                 simulateData();
-                LigerUIHelper.tiptm("加载数据成功", 1500);
+                //LigerUIHelper.tiptm("加载数据成功", 1500);
             }, 3000)
 
         });
@@ -182,8 +185,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="content" runat="server">
-	<div>
-    <table id="dtmain" border="2" style=" margin: 30px auto;border-color:#aecaf0;font-variant: normal; ">
+    <table id="dtmain" border="2" style=" margin: 5px auto;border-color:#aecaf0;font-variant: normal;height:100%;width:100% ">
         <tr>
             <td colspan="3">
                 <p id="title" style="text-align: center; font-size: xx-large; font-variant: normal;">某地+泵站名称</p>
@@ -247,11 +249,10 @@
             </td>
         </tr>
     </table>
-</div>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="nav" runat="server">
-	<div id="pumpstation" title="泵站信息" >
+    <div id="pumpstation" title="泵站信息" >
     <ul id="treeinfpumpstation" style="margin-top:3px;" />
 </div>
 </asp:Content>

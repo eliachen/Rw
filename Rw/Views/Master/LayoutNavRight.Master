@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="LayoutNavRight.master.vb" Inherits="Rw.LayoutNavRight" %>
+﻿<%@ Master Language="VB" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <!DOCTYPE html>
 
@@ -25,21 +25,20 @@
         body, iframe, html {
             width: 100%;
             height: 100%;
-            margin:0px 0px 0px 0px;
-            /*overflow-x :hidden;
-            overflow-y:hidden ;*/
+            margin:0;
+            overflow:hidden;
         }
     </style>
 
     <script type="text/javascript">
         var acrd;
-
+        var isRightCollapse = false;
         //初始化版面
         var InitialLayout = function (acrdwidth, title) {
             //初始化标题
             $("#rightInf").attr("title", title);
             //布局
-            $("#layoutShow").ligerLayout({ rightWidth: acrdwidth, height: '100%', space: 1, onHeightChanged: f_heightChanged });
+            $("#layoutShow").ligerLayout({ rightWidth: acrdwidth, isRightCollapse: isRightCollapse, height: '100%', space: 1, onHeightChanged: f_heightChanged });
             //初始化Accordion高度
             var height = $(".l-layout-center").height();
             acrd = $("#accordioninf").ligerAccordion({ height: height - 24 });
