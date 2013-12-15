@@ -31,9 +31,7 @@
             $('#pictitle').html("气象测站于2013-12-1云图信息");
         });
     </script>
-    <script type="text/javascript">
-      
-    </script>
+    
     <script type="text/javascript">
         var initialQueryBar = function () {
            var t= $("#mydate").ligerDateEditor(
@@ -55,9 +53,7 @@
     <title></title>
 </head>
 <body>
-
-    
-        <table border="1" style="width:800px;">
+        <table border="1" style="width:800px;margin:0 auto">
              <tr>
                 <td colspan="4"><p id="pictitle" style="text-align:center;font-size:24px"></p></td>
             </tr>
@@ -69,7 +65,5 @@
                 <td style="width:25%">查询信息: <div class="querymid" ><input id="querybtn" type="button" value="查询" /></div></td>
             </tr>
         </table>
-     
-
 </body>
 </html>

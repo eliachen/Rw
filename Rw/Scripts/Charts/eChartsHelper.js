@@ -30,7 +30,8 @@ function eChartsHelper_DrawEasyBar(chart, eoption) {
     chart.clear();
 
     //图表选项
-   var tmpoption = { tooltip: {
+    var tmpoption = {
+        tooltip: {
         show: true,
         trigger: 'item'
     },

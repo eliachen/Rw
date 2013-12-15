@@ -29,7 +29,27 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("安徽省岳西县")>  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrate"& _ 
+            "d Security=True;Connect Timeout=30")>  _
+        Public ReadOnly Property DbConnStr() As String
+            Get
+                Return CType(Me("DbConnStr"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\MrLin\RainAndWater\Rw\Rw.DAL")>  _
+        Public ReadOnly Property RepPath() As String
+            Get
+                Return CType(Me("RepPath"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("安徽省黄山市")>  _
         Public ReadOnly Property MapAddrName() As String
             Get
                 Return CType(Me("MapAddrName"),String)
@@ -38,39 +58,30 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("安徽岳西县雨水情监测图")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("安徽省黄山市水情监测图")>  _
         Public ReadOnly Property MapTitle() As String
             Get
                 Return CType(Me("MapTitle"),String)
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString), _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrate" & _
-            "d Security=True;Connect Timeout=30")> _
-        Public ReadOnly Property DbConnStr() As String
-            Get
-                Return CType(Me("DbConnStr"), String)
-            End Get
-        End Property
-
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("6000")> _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("60000")>  _
         Public ReadOnly Property DataFlush() As Integer
             Get
-                Return CType(Me("DataFlush"), Integer)
+                Return CType(Me("DataFlush"),Integer)
             End Get
         End Property
-
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\MrLin\RainAndWater\Rw\Rw.DAL")> _
-        Public ReadOnly Property RepPath() As String
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrate"& _ 
+            "d Security=True;Connect Timeout=30")>  _
+        Public ReadOnly Property ss() As String
             Get
-                Return CType(Me("RepPath"), String)
+                Return CType(Me("ss"),String)
             End Get
         End Property
     End Class

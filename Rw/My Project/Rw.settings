@@ -2,12 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="Rw" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="MapAddrName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">安徽省岳西县</Value>
-    </Setting>
-    <Setting Name="MapTitle" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">安徽岳西县雨水情监测图</Value>
-    </Setting>
     <Setting Name="DbConnStr" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -16,11 +10,24 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
-    <Setting Name="DataFlush" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">6000</Value>
-    </Setting>
     <Setting Name="RepPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\MrLin\RainAndWater\Rw\Rw.DAL</Value>
+    </Setting>
+    <Setting Name="MapAddrName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">安徽省黄山市</Value>
+    </Setting>
+    <Setting Name="MapTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">安徽省黄山市水情监测图</Value>
+    </Setting>
+    <Setting Name="DataFlush" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60000</Value>
+    </Setting>
+    <Setting Name="ss" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\Data\Rw\easy\RwData.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
   </Settings>
 </SettingsFile>

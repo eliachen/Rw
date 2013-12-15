@@ -19,7 +19,7 @@
                     formatter: function (params, ticket, callback) {
                         var showStr = "时间:" + params[0][1] + '</br>' +
                                       "水位:" + params[0][2] + 'm' + '</br>' +
-                                      "流量:" + params[1][2] + 'm³/s';;
+                                      "流量:" + params[1][2] + 'm³/s';
                         return showStr;
                     }
                 },

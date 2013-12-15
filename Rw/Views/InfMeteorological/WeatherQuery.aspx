@@ -36,7 +36,6 @@
         $(function () {
             initialWeatherChart();
             initialQueryBar();
-
            
         });
     </script>

@@ -34,9 +34,6 @@
             text-align: center;
             border-color: #FFC340;
         }
-        .auto-style1 {
-            width: 40px;
-        }
     </style>
     <script type="text/javascript">
         $(function () {
