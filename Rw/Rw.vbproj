@@ -82,6 +82,8 @@
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DataVisualization">
       <Private>True</Private>
     </Reference>
@@ -197,6 +199,11 @@
       <DependentUpon>ReportWater.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Service References\ServiceReferenceWater\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Settings.vb" />
     <Compile Include="TempWebForm\WebFormVideo.aspx.designer.vb">
       <DependentUpon>WebFormVideo.aspx</DependentUpon>
@@ -237,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jQuery.jPlayer\jquery.jplayer.min.js" />
+    <None Include="Service References\ServiceReferenceWater\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceWater\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceWater\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Views\InfPumpStation\PumpStationVideo.aspx" />
     <Content Include="Views\InfPumpStation\PumpStation.aspx" />
     <Content Include="Web.config">
@@ -305,6 +318,7 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="Service References\ServiceReferenceWater\WebService_AnHui.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -664,7 +678,9 @@
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferenceWater\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rw.Common\Rw.Common.vbproj">
       <Project>{6423FFE4-47A1-476B-B244-E281D9EAAB61}</Project>

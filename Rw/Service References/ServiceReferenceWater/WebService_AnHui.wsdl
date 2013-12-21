@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYqXx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYqXxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getYqXxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSqXx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sttp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSqXxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSqXxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYlZzt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getYlZztResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getYlZztResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSwGcx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sttp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSwGcxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSwGcxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSwGcx_Tz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSwGcx_TzResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSwGcx_TzResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLlGcx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sttp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLlGcxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLlGcxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSw_BjXx">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSw_BjXxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSw_BjXxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWaterInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="getWaterInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWaterInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRainInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRainInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRainInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getZxYl">
+        <s:complexType />
+      </s:element>
+      <s:element name="getZxYlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getZxYlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getfeature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stcd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getfeatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getfeatureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AvgAreaRain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AvgAreaRainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AvgAreaRainResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_RYLTJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ri_Yl" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_RYLTJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_RYLTJResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_RYLTJ_TS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ri_Yl" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_RYLTJ_TSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_RYLTJ_TSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_Ri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_RiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_RiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_Dls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_DlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_DlsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_Cls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ylts" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_ClsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_ClsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_DsPj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_DsPjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_DsPjResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_ZdTj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_YL_ZdTjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_YL_ZdTjResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_SS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_SSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_SSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_TZZ">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_SW_TZZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_TZZResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ZD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ZDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_ZDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ZD_OLD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ZD_OLDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_ZD_OLDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ChaoJing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChaoJingLx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ChaoJingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_ChaoJingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ChaoJing_OLD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="startTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuLx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QuYuMing" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChaoJingLx" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SW_ChaoJing_OLDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SW_ChaoJing_OLDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CzZt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CzZtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_CzZtResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CzZt_OLD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="endTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CzZt_OLDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_CzZt_OLDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getYqXxSoapIn">
+    <wsdl:part name="parameters" element="tns:getYqXx" />
+  </wsdl:message>
+  <wsdl:message name="getYqXxSoapOut">
+    <wsdl:part name="parameters" element="tns:getYqXxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSqXxSoapIn">
+    <wsdl:part name="parameters" element="tns:getSqXx" />
+  </wsdl:message>
+  <wsdl:message name="getSqXxSoapOut">
+    <wsdl:part name="parameters" element="tns:getSqXxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getYlZztSoapIn">
+    <wsdl:part name="parameters" element="tns:getYlZzt" />
+  </wsdl:message>
+  <wsdl:message name="getYlZztSoapOut">
+    <wsdl:part name="parameters" element="tns:getYlZztResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSwGcxSoapIn">
+    <wsdl:part name="parameters" element="tns:getSwGcx" />
+  </wsdl:message>
+  <wsdl:message name="getSwGcxSoapOut">
+    <wsdl:part name="parameters" element="tns:getSwGcxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSwGcx_TzSoapIn">
+    <wsdl:part name="parameters" element="tns:getSwGcx_Tz" />
+  </wsdl:message>
+  <wsdl:message name="getSwGcx_TzSoapOut">
+    <wsdl:part name="parameters" element="tns:getSwGcx_TzResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLlGcxSoapIn">
+    <wsdl:part name="parameters" element="tns:getLlGcx" />
+  </wsdl:message>
+  <wsdl:message name="getLlGcxSoapOut">
+    <wsdl:part name="parameters" element="tns:getLlGcxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSw_BjXxSoapIn">
+    <wsdl:part name="parameters" element="tns:getSw_BjXx" />
+  </wsdl:message>
+  <wsdl:message name="getSw_BjXxSoapOut">
+    <wsdl:part name="parameters" element="tns:getSw_BjXxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWaterInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getWaterInfo" />
+  </wsdl:message>
+  <wsdl:message name="getWaterInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getWaterInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRainInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getRainInfo" />
+  </wsdl:message>
+  <wsdl:message name="getRainInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getRainInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZxYlSoapIn">
+    <wsdl:part name="parameters" element="tns:getZxYl" />
+  </wsdl:message>
+  <wsdl:message name="getZxYlSoapOut">
+    <wsdl:part name="parameters" element="tns:getZxYlResponse" />
+  </wsdl:message>
+  <wsdl:message name="getfeatureSoapIn">
+    <wsdl:part name="parameters" element="tns:getfeature" />
+  </wsdl:message>
+  <wsdl:message name="getfeatureSoapOut">
+    <wsdl:part name="parameters" element="tns:getfeatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="AvgAreaRainSoapIn">
+    <wsdl:part name="parameters" element="tns:AvgAreaRain" />
+  </wsdl:message>
+  <wsdl:message name="AvgAreaRainSoapOut">
+    <wsdl:part name="parameters" element="tns:AvgAreaRainResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RYLTJSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_RYLTJ" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RYLTJSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_RYLTJResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RYLTJ_TSSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_RYLTJ_TS" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RYLTJ_TSSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_RYLTJ_TSResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RiSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_Ri" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_RiSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_RiResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_DlsSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_Dls" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_DlsSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_DlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_ClsSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_Cls" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_ClsSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_ClsResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_DsPjSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_DsPj" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_DsPjSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_DsPjResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_ZdTjSoapIn">
+    <wsdl:part name="parameters" element="tns:get_YL_ZdTj" />
+  </wsdl:message>
+  <wsdl:message name="get_YL_ZdTjSoapOut">
+    <wsdl:part name="parameters" element="tns:get_YL_ZdTjResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_SSSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_SS" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_SSSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_SSResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_TZZSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_TZZ" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_TZZSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_TZZResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ZDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_ZD" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ZDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_ZDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ZD_OLDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_ZD_OLD" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ZD_OLDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_ZD_OLDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ChaoJingSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_ChaoJing" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ChaoJingSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_ChaoJingResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ChaoJing_OLDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SW_ChaoJing_OLD" />
+  </wsdl:message>
+  <wsdl:message name="get_SW_ChaoJing_OLDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SW_ChaoJing_OLDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CzZtSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CzZt" />
+  </wsdl:message>
+  <wsdl:message name="get_CzZtSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CzZtResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CzZt_OLDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CzZt_OLD" />
+  </wsdl:message>
+  <wsdl:message name="get_CzZt_OLDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CzZt_OLDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService_AnHuiSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getYqXx">
+      <wsdl:input message="tns:getYqXxSoapIn" />
+      <wsdl:output message="tns:getYqXxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSqXx">
+      <wsdl:input message="tns:getSqXxSoapIn" />
+      <wsdl:output message="tns:getSqXxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getYlZzt">
+      <wsdl:input message="tns:getYlZztSoapIn" />
+      <wsdl:output message="tns:getYlZztSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx">
+      <wsdl:input message="tns:getSwGcxSoapIn" />
+      <wsdl:output message="tns:getSwGcxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx_Tz">
+      <wsdl:input message="tns:getSwGcx_TzSoapIn" />
+      <wsdl:output message="tns:getSwGcx_TzSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLlGcx">
+      <wsdl:input message="tns:getLlGcxSoapIn" />
+      <wsdl:output message="tns:getLlGcxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSw_BjXx">
+      <wsdl:input message="tns:getSw_BjXxSoapIn" />
+      <wsdl:output message="tns:getSw_BjXxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWaterInfo">
+      <wsdl:input message="tns:getWaterInfoSoapIn" />
+      <wsdl:output message="tns:getWaterInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRainInfo">
+      <wsdl:input message="tns:getRainInfoSoapIn" />
+      <wsdl:output message="tns:getRainInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getZxYl">
+      <wsdl:input message="tns:getZxYlSoapIn" />
+      <wsdl:output message="tns:getZxYlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getfeature">
+      <wsdl:input message="tns:getfeatureSoapIn" />
+      <wsdl:output message="tns:getfeatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AvgAreaRain">
+      <wsdl:input message="tns:AvgAreaRainSoapIn" />
+      <wsdl:output message="tns:AvgAreaRainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ">
+      <wsdl:input message="tns:get_YL_RYLTJSoapIn" />
+      <wsdl:output message="tns:get_YL_RYLTJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ_TS">
+      <wsdl:input message="tns:get_YL_RYLTJ_TSSoapIn" />
+      <wsdl:output message="tns:get_YL_RYLTJ_TSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Ri">
+      <wsdl:input message="tns:get_YL_RiSoapIn" />
+      <wsdl:output message="tns:get_YL_RiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Dls">
+      <wsdl:input message="tns:get_YL_DlsSoapIn" />
+      <wsdl:output message="tns:get_YL_DlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Cls">
+      <wsdl:input message="tns:get_YL_ClsSoapIn" />
+      <wsdl:output message="tns:get_YL_ClsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_DsPj">
+      <wsdl:input message="tns:get_YL_DsPjSoapIn" />
+      <wsdl:output message="tns:get_YL_DsPjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_ZdTj">
+      <wsdl:input message="tns:get_YL_ZdTjSoapIn" />
+      <wsdl:output message="tns:get_YL_ZdTjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_SS">
+      <wsdl:input message="tns:get_SW_SSSoapIn" />
+      <wsdl:output message="tns:get_SW_SSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_TZZ">
+      <wsdl:input message="tns:get_SW_TZZSoapIn" />
+      <wsdl:output message="tns:get_SW_TZZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD">
+      <wsdl:input message="tns:get_SW_ZDSoapIn" />
+      <wsdl:output message="tns:get_SW_ZDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD_OLD">
+      <wsdl:input message="tns:get_SW_ZD_OLDSoapIn" />
+      <wsdl:output message="tns:get_SW_ZD_OLDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing">
+      <wsdl:input message="tns:get_SW_ChaoJingSoapIn" />
+      <wsdl:output message="tns:get_SW_ChaoJingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing_OLD">
+      <wsdl:input message="tns:get_SW_ChaoJing_OLDSoapIn" />
+      <wsdl:output message="tns:get_SW_ChaoJing_OLDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt">
+      <wsdl:input message="tns:get_CzZtSoapIn" />
+      <wsdl:output message="tns:get_CzZtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt_OLD">
+      <wsdl:input message="tns:get_CzZt_OLDSoapIn" />
+      <wsdl:output message="tns:get_CzZt_OLDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService_AnHuiSoap" type="tns:WebService_AnHuiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYqXx">
+      <soap:operation soapAction="http://tempuri.org/getYqXx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSqXx">
+      <soap:operation soapAction="http://tempuri.org/getSqXx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYlZzt">
+      <soap:operation soapAction="http://tempuri.org/getYlZzt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx">
+      <soap:operation soapAction="http://tempuri.org/getSwGcx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx_Tz">
+      <soap:operation soapAction="http://tempuri.org/getSwGcx_Tz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLlGcx">
+      <soap:operation soapAction="http://tempuri.org/getLlGcx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSw_BjXx">
+      <soap:operation soapAction="http://tempuri.org/getSw_BjXx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaterInfo">
+      <soap:operation soapAction="http://tempuri.org/getWaterInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRainInfo">
+      <soap:operation soapAction="http://tempuri.org/getRainInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZxYl">
+      <soap:operation soapAction="http://tempuri.org/getZxYl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getfeature">
+      <soap:operation soapAction="http://tempuri.org/getfeature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgAreaRain">
+      <soap:operation soapAction="http://tempuri.org/AvgAreaRain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ">
+      <soap:operation soapAction="http://tempuri.org/get_YL_RYLTJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ_TS">
+      <soap:operation soapAction="http://tempuri.org/get_YL_RYLTJ_TS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Ri">
+      <soap:operation soapAction="http://tempuri.org/get_YL_Ri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Dls">
+      <soap:operation soapAction="http://tempuri.org/get_YL_Dls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Cls">
+      <soap:operation soapAction="http://tempuri.org/get_YL_Cls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_DsPj">
+      <soap:operation soapAction="http://tempuri.org/get_YL_DsPj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_ZdTj">
+      <soap:operation soapAction="http://tempuri.org/get_YL_ZdTj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_SS">
+      <soap:operation soapAction="http://tempuri.org/get_SW_SS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_TZZ">
+      <soap:operation soapAction="http://tempuri.org/get_SW_TZZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD">
+      <soap:operation soapAction="http://tempuri.org/get_SW_ZD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD_OLD">
+      <soap:operation soapAction="http://tempuri.org/get_SW_ZD_OLD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing">
+      <soap:operation soapAction="http://tempuri.org/get_SW_ChaoJing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing_OLD">
+      <soap:operation soapAction="http://tempuri.org/get_SW_ChaoJing_OLD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt">
+      <soap:operation soapAction="http://tempuri.org/get_CzZt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt_OLD">
+      <soap:operation soapAction="http://tempuri.org/get_CzZt_OLD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_AnHuiSoap12" type="tns:WebService_AnHuiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYqXx">
+      <soap12:operation soapAction="http://tempuri.org/getYqXx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSqXx">
+      <soap12:operation soapAction="http://tempuri.org/getSqXx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getYlZzt">
+      <soap12:operation soapAction="http://tempuri.org/getYlZzt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx">
+      <soap12:operation soapAction="http://tempuri.org/getSwGcx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSwGcx_Tz">
+      <soap12:operation soapAction="http://tempuri.org/getSwGcx_Tz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLlGcx">
+      <soap12:operation soapAction="http://tempuri.org/getLlGcx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSw_BjXx">
+      <soap12:operation soapAction="http://tempuri.org/getSw_BjXx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWaterInfo">
+      <soap12:operation soapAction="http://tempuri.org/getWaterInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRainInfo">
+      <soap12:operation soapAction="http://tempuri.org/getRainInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZxYl">
+      <soap12:operation soapAction="http://tempuri.org/getZxYl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getfeature">
+      <soap12:operation soapAction="http://tempuri.org/getfeature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvgAreaRain">
+      <soap12:operation soapAction="http://tempuri.org/AvgAreaRain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_RYLTJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_RYLTJ_TS">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_RYLTJ_TS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Ri">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_Ri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Dls">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_Dls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_Cls">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_Cls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_DsPj">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_DsPj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_YL_ZdTj">
+      <soap12:operation soapAction="http://tempuri.org/get_YL_ZdTj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_SS">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_SS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_TZZ">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_TZZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_ZD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ZD_OLD">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_ZD_OLD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_ChaoJing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SW_ChaoJing_OLD">
+      <soap12:operation soapAction="http://tempuri.org/get_SW_ChaoJing_OLD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt">
+      <soap12:operation soapAction="http://tempuri.org/get_CzZt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CzZt_OLD">
+      <soap12:operation soapAction="http://tempuri.org/get_CzZt_OLD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService_AnHui">
+    <wsdl:port name="WebService_AnHuiSoap" binding="tns:WebService_AnHuiSoap">
+      <soap:address location="http://yc.wswj.net/ahyc/WebService_AnHui.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService_AnHuiSoap12" binding="tns:WebService_AnHuiSoap12">
+      <soap12:address location="http://yc.wswj.net/ahyc/WebService_AnHui.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
